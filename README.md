@@ -2,6 +2,8 @@
 Loja de Afiliado Shopee
 # Mega Desconto - Loja de Afiliado Shopee
 
+Theme: jeky11-LojaVirtual
+
 ## Sobre o projeto
 Mega Desconto é uma vitrine virtual criada por **Marcos Junior**, um afiliado da Shopee, com o objetivo de facilitar o acesso a **promoções exclusivas** de diversos produtos. Este site foi desenvolvido para tornar a experiência de compra mais prática e rápida, apresentando ofertas com **atualização diária**.
 
