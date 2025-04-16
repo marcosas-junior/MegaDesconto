@@ -74,23 +74,23 @@
 
     <script>
         fetch('produtos.json')
-        .then(response => response.json())
-        .then(produtos => {
-            let produtosHTML = '';
-            produtos.forEach(produto => {
-                produtosHTML += `
-                    <div class="produto">
-                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/250'}" alt="${produto['Item Name']}">
-                        <h2>${produto['Item Name']}</h2>
-                        <p>Preço: <strong>R$${produto['Price']}</strong></p>
-                        <p>Loja: ${produto['Shop Name']}</p>
-                        <a href="${produto['Product Link']}" target="_blank">Ver produto</a>
-                    </div>
-                `;
-            });
-            document.getElementById('produtos').innerHTML = produtosHTML;
-        })
-        .catch(error => console.error('Erro ao carregar produtos:', error));
+.then(response => response.json())
+.then(produtos => {
+    let produtosHTML = '';
+    produtos.forEach(produto => {
+        produtosHTML += `
+            <div class="produto">
+                <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/250'}" alt="${produto['Nome do item']}">
+                <h2>${produto['Nome do item']}</h2>
+                <p>Preço: <strong>R$${produto['Preço']}</strong></p>
+                <p>Loja: ${produto['Nome da loja']}</p>
+                <a href="${produto['Link da oferta']}" target="_blank">Ver produto</a>
+            </div>
+        `;
+    });
+    document.getElementById('produtos').innerHTML = produtosHTML;
+})
+.catch(error => console.error('Erro ao carregar produtos:', error));
     </script>
 
 </body>
