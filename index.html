@@ -73,7 +73,7 @@
     <div id="produtos" class="container"></div>
 
     <script>
-        fetch('Produtos.json')
+        fetch('produtos.json')
 .then(response => response.json())
 .then(produtos => {
     let produtosHTML = '';
@@ -84,7 +84,7 @@
                 <h2>${produto['Nome do item']}</h2>
                 <p>Preço: <strong>R$${produto['Preço']}</strong></p>
                 <p>Loja: ${produto['Nome da loja']}</p>
-                <a href="${produto['Link da oferta']}" target="_blank">Ver produto</a>
+                <a href="${produto['Link do produto']}" target="_blank">Ver produto</a>
             </div>
         `;
     });
