@@ -82,8 +82,8 @@
             <div class="produto">
                 <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/250'}" alt="${produto['Nome do item']}">
                 <h2>${produto['Nome do item']}</h2>
-                <p>Preço: <strong>R$${produto['Preço']}</strong></p>
-                <p>Loja: ${produto['Nome da loja']}</p>
+                <p>Preço: <strong>R$${produto['Sales']}</strong></p>
+                <p>Loja: ${produto['Shop Name']}</p>
                 <a href="${produto['Link do produto']}" target="_blank">Ver produto</a>
             </div>
         `;
