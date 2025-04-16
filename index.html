@@ -8,17 +8,18 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            text-align: center;
             margin: 20px;
+            text-align: center;
         }
         h1 {
             color: #ff6600;
         }
-        .banner {
+        .banner, .filtros {
+            margin: 20px 0;
+            padding: 10px;
             background-color: #ff6600;
             color: white;
-            padding: 10px;
-            font-size: 18px;
+            border-radius: 10px;
         }
         .container {
             display: flex;
@@ -26,11 +27,11 @@
             justify-content: center;
         }
         .produto {
-            background: white;
+            background-color: white;
             border-radius: 10px;
             padding: 15px;
             margin: 10px;
-            width: 250px;
+            width: 300px;
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -70,27 +71,71 @@
         Está procurando algo e não encontrou? Fale com Marcos Junior pelo WhatsApp <strong>(35)99214-4644</strong>! 🚀
     </div>
 
+    <div class="filtros">
+        <label for="filtro-categoria">Filtrar por Categoria: </label>
+        <select id="filtro-categoria">
+            <option value="">Todas</option>
+        </select>
+        <br><br>
+        <label for="filtro-nome">Filtrar por Nome: </label>
+        <input type="text" id="filtro-nome" placeholder="Digite parte do nome...">
+        <button onclick="aplicarFiltros()">Filtrar</button>
+    </div>
+
     <div id="produtos" class="container"></div>
 
     <script>
+        let produtos = [];
+
         fetch('Produtos.json')
-.then(response => response.json())
-.then(produtos => {
-    let produtosHTML = '';
-    produtos.forEach(produto => {
-        produtosHTML += `
-            <div class="produto">
-                <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/250'}" alt="${produto['Nome do item']}">
-                <h2>${produto['Nome do item']}</h2>
-                <p>Preço: <strong>R$${produto['Sales']}</strong></p>
-                <p>Loja: ${produto['Shop Name']}</p>
-                <a href="${produto['Link do produto']}" target="_blank">Ver produto</a>
-            </div>
-        `;
-    });
-    document.getElementById('produtos').innerHTML = produtosHTML;
-})
-.catch(error => console.error('Erro ao carregar produtos:', error));
+        .then(response => response.json())
+        .then(data => {
+            produtos = data;
+
+            // Preencher opções de categorias
+            const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
+            const filtroCategoria = document.getElementById('filtro-categoria');
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria;
+                option.textContent = categoria;
+                filtroCategoria.appendChild(option);
+            });
+
+            // Exibir todos os produtos inicialmente
+            exibirProdutos(produtos);
+        })
+        .catch(error => console.error('Erro ao carregar produtos:', error));
+
+        function exibirProdutos(lista) {
+            const container = document.getElementById('produtos');
+            container.innerHTML = ''; // Limpar conteúdo
+            lista.forEach(produto => {
+                container.innerHTML += `
+                    <div class="produto">
+                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                        <h2>${produto['Item Name']}</h2>
+                        <p>Preço: <strong>R$${produto.Sales}</strong></p>
+                        <p>Loja: ${produto['Shop Name']}</p>
+                        <p>Categoria: ${produto.Categoria}</p>
+                        <a href="${produto['Product Link']}" target="_blank">Ver produto</a>
+                    </div>
+                `;
+            });
+        }
+
+        function aplicarFiltros() {
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+            const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
+
+            const produtosFiltrados = produtos.filter(produto => {
+                const categoriaCorresponde = filtroCategoria === '' || produto.Categoria === filtroCategoria;
+                const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
+                return categoriaCorresponde && nomeCorresponde;
+            });
+
+            exibirProdutos(produtosFiltrados);
+        }
     </script>
 
 </body>
