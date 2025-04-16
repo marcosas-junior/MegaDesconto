@@ -93,7 +93,7 @@
             produtos = data;
 
             // Preencher opções de categorias
-            const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
+            const categorias = [...new Set(produtos.map(produto => produto.categoria))];
             const filtroCategoria = document.getElementById('filtro-categoria');
             categorias.forEach(categoria => {
                 const option = document.createElement('option');
