@@ -191,15 +191,16 @@
         .catch(error => console.error('Erro ao carregar menu:', error));
 
 
-        let produtos = [];
+        
+    let produtos = [];
 
-        // Carregar produtos
-        fetch('Produtos.json')
+    // Carregar produtos do JSON
+    fetch('Produtos.json')
         .then(response => response.json())
         .then(data => {
             produtos = data;
 
-            // Preencher opções de categorias
+            // Preencher opções de categorias no filtro
             const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
             const filtroCategoria = document.getElementById('filtro-categoria');
             categorias.forEach(categoria => {
@@ -209,27 +210,43 @@
                 filtroCategoria.appendChild(option);
             });
 
+            // Exibir todos os produtos inicialmente
             exibirProdutos(produtos);
         })
         .catch(error => console.error('Erro ao carregar produtos:', error));
 
-        function exibirProdutos(lista) {
-            const container = document.getElementById('produtos');
-            container.innerHTML = ''; // Limpar conteúdo
-            lista.forEach(produto => {
-                container.innerHTML += `
-                    <div class="produto">
-                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                        <h2>${produto['Item Name']}</h2>
-                        <p>Preço: <strong>R$${produto.Price}</strong></p>
-                        <p>Loja: ${produto['Shop Name']}</p>
-                        <p>Categoria: ${produto.Categoria}</p>
-                        <a href="${produto['Product Link']}" target="_blank">Ver produto</a>
-                    </div>
-                `;
-            });
-        }
-    </script>    
+    // Exibir produtos na página
+    function exibirProdutos(lista) {
+        const container = document.getElementById('produtos');
+        container.innerHTML = ''; // Limpar produtos anteriores
+        lista.forEach(produto => {
+            container.innerHTML += `
+                <div class="produto">
+                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    <h2>${produto['Item Name']}</h2>
+                    <p>Preço: <strong>R$${produto.Price}</strong></p>
+                    <p>Loja: ${produto['Shop Name']}</p>
+                    <p>Categoria: ${produto.Categoria}</p>
+                    <a href="${produto['Product Link']}" target="_blank">Ver produto</a>
+                </div>
+            `;
+        });
+    }
+
+    // Aplicar filtros de nome e categoria
+    function aplicarFiltros() {
+        const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
+        const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
+
+        const produtosFiltrados = produtos.filter(produto => {
+            const categoriaCorresponde = !filtroCategoria || produto.Categoria.toLowerCase() === filtroCategoria;
+            const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
+            return categoriaCorresponde && nomeCorresponde;
+        });
+
+        exibirProdutos(produtosFiltrados); // Atualiza a lista exibida
+    }
+</script>
 
 </body>
 </html>
