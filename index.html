@@ -3,17 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega Desconto - Loja de Afiliado Shopee</title>
+    <title>Mega Desconto - Afiliado Shopee</title>
+
     <style>
+        /* Estilos para a logo */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 15%;
+            width: 125px;
+            height: auto;
+        }
+
+        /* Estilos para o menu lateral */
+        .menu-lateral {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px; /* Ajustado para não cobrir o conteúdo */
+            background-color: #f4f4f4;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding-top: 60px;
+        }
+
+        .menu-item {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item a {
+            font-size: 16px;
+            color: #ff6600;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ajuste no layout para evitar sobreposição */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 20px;
+            margin-left: 260px; /* Ajustado para que o menu não sobreponha */
             text-align: center;
         }
+
         h1 {
             color: #ff6600;
         }
+
         .banner, .filtros {
             margin: 20px 0;
             padding: 10px;
@@ -21,11 +71,20 @@
             color: white;
             border-radius: 10px;
         }
+
+        /* Adicionando estilos para os filtros */
+        .filtros {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Container para os produtos */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
+
         .produto {
             background-color: white;
             border-radius: 10px;
@@ -35,19 +94,23 @@
             text-align: left;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         .produto img {
             width: 100%;
             height: auto;
             border-radius: 10px;
         }
+
         .produto h2 {
             font-size: 18px;
             margin: 10px 0;
         }
+
         .produto p {
             font-size: 14px;
             color: #555;
         }
+
         .produto a {
             display: block;
             text-align: center;
@@ -58,6 +121,7 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+
         .produto a:hover {
             background-color: #218838;
         }
@@ -65,11 +129,12 @@
 </head>
 <body>
 
-    <h1>Mega Desconto - Loja de Afiliado Shopee</h1>
+    <img src="LogoMegaDesconto.png" alt="Mega Desconto" class="logo">
 
-    <div class="banner">
-        Está procurando algo e não encontrou? Fale com Marcos Junior pelo WhatsApp <strong>(35)99214-4644</strong>! 🚀
-    </div>
+    <div class="menu-lateral" id="menu-lateral"></div>
+
+    <h1>Mega Desconto - Afiliado Shopee</h1>
+    <h1>Apresenta as 300 melhores ofertas do dia na Shopee</h1>
 
     <div class="filtros">
         <label for="filtro-categoria">Filtrar por Categoria: </label>
@@ -82,16 +147,58 @@
         <button onclick="aplicarFiltros()">Filtrar</button>
     </div>
 
+    <div class="cupons">
+        <h2>Cupons Disponíveis</h2>
+        <div id="lista-cupons"></div>
+    </div>
+
     <div id="produtos" class="container"></div>
 
     <script>
+        // Carregar cupons
+        fetch('cupons.json')
+        .then(response => response.json())
+        .then(cupons => {
+            const listaCupons = document.getElementById('lista-cupons');
+            cupons.forEach(cupom => {
+                listaCupons.innerHTML += `
+                    <p>Cupom: <strong>${cupom.NumeroCupom}</strong> | Categoria: ${cupom.Categoria}</p>
+                `;
+            });
+        })
+        .catch(error => console.error('Erro ao carregar cupons:', error));
+
+        
+        // Carregar categorias específicas para o menu lateral
+        fetch('./catMenu.json') // Atualizado para o novo nome do arquivo
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro HTTP! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(categorias => {
+            const menuLateral = document.getElementById('menu-lateral');
+            categorias.forEach(categoria => {
+                menuLateral.innerHTML += `
+                    <div class="menu-item">
+                        <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
+                        <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
+                    </div>
+                `;
+            });
+        })
+        .catch(error => console.error('Erro ao carregar menu:', error));
+
+
         let produtos = [];
-    
+
+        // Carregar produtos
         fetch('Produtos.json')
         .then(response => response.json())
         .then(data => {
             produtos = data;
-    
+
             // Preencher opções de categorias
             const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
             const filtroCategoria = document.getElementById('filtro-categoria');
@@ -101,12 +208,11 @@
                 option.textContent = categoria;
                 filtroCategoria.appendChild(option);
             });
-    
-            // Exibir todos os produtos inicialmente
+
             exibirProdutos(produtos);
         })
         .catch(error => console.error('Erro ao carregar produtos:', error));
-    
+
         function exibirProdutos(lista) {
             const container = document.getElementById('produtos');
             container.innerHTML = ''; // Limpar conteúdo
@@ -122,19 +228,6 @@
                     </div>
                 `;
             });
-        }
-    
-        function aplicarFiltros() {
-            const filtroCategoria = document.getElementById('filtro-categoria').value;
-            const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
-    
-            const produtosFiltrados = produtos.filter(produto => {
-                const categoriaCorresponde = filtroCategoria === '' || produto.Categoria === filtroCategoria;
-                const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
-                return categoriaCorresponde && nomeCorresponde;
-            });
-    
-            exibirProdutos(produtosFiltrados);
         }
     </script>    
 
