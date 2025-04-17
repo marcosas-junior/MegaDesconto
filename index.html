@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Desconto - Afiliado Shopee</title>
-
     <style>
         /* Estilos para a logo */
         .logo {
             position: absolute;
             top: 10px;
-            left: 15%;
-            width: 125px;
+            left: 10%; /* Reduzido de 15% para diminuir o espaço */
+            width: 90px; /* Reduzido de 125px para diminuir o tamanho */
             height: auto;
         }
 
@@ -21,28 +20,38 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 250px; /* Ajustado para não cobrir o conteúdo */
+            width: 200px; /* Reduzido de 250px para diminuir a largura */
             background-color: #f4f4f4;
             overflow-y: auto;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            padding-top: 60px;
+            padding-top: 50px; /* Reduzido de 60px para ajustar o espaçamento */
         }
 
+        .menu-lateral h2 { /* Novo estilo para o título do menu */
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em; /* Tamanho da fonte 30% menor */
+            color: #ff6600;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+
+
         .menu-item {
-            padding: 15px;
+            padding: 10px; /* Reduzido de 15px para diminuir o espaçamento */
             border-bottom: 1px solid #ddd;
             text-align: center;
         }
 
         .menu-item img {
-            width: 80%;
+            width: 56px; /* Reduzido de 80% para 56% */
             height: auto;
             border-radius: 5px;
-            margin-bottom: 10px;
+            margin-bottom: 5px; /* Reduzido de 10px para diminuir o espaçamento */
         }
 
         .menu-item a {
-            font-size: 16px;
+            font-size: 0.84em; /* Reduzido de 16px para 0.84em (30% menor) */
             color: #ff6600;
             text-decoration: none;
             display: block;
@@ -56,26 +65,27 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin-left: 260px; /* Ajustado para que o menu não sobreponha */
+            margin-left: 210px; /* Ajustado para que o menu não sobreponha (200px + 10px de margem) */
             text-align: center;
         }
 
         h1 {
             color: #ff6600;
+            font-size: 1.2em; /* Reduzido o tamanho do título principal */
         }
 
         .banner, .filtros {
-            margin: 20px 0;
-            padding: 10px;
+            margin: 15px 0; /* Reduzido de 20px para diminuir o espaçamento */
+            padding: 8px; /* Reduzido de 10px para diminuir o espaçamento */
             background-color: #ff6600;
             color: white;
-            border-radius: 10px;
+            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
         }
 
         /* Adicionando estilos para os filtros */
         .filtros {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Reduzido de 20px para diminuir o espaçamento */
         }
 
         /* Container para os produtos */
@@ -87,39 +97,39 @@
 
         .produto {
             background-color: white;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 10px;
-            width: 300px;
+            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
+            padding: 12px; /* Reduzido de 15px para diminuir o espaçamento */
+            margin: 8px; /* Reduzido de 10px para diminuir o espaçamento */
+            width: 280px; /* Ligeiramente reduzido de 300px */
             text-align: left;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Reduzido de 10px para diminuir a sombra */
         }
 
         .produto img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
         }
 
         .produto h2 {
-            font-size: 18px;
-            margin: 10px 0;
+            font-size: 1em; /* Reduzido de 18px para 1em */
+            margin: 8px 0; /* Reduzido de 10px 0 para diminuir o espaçamento */
         }
 
         .produto p {
-            font-size: 14px;
+            font-size: 0.7em; /* Reduzido de 14px para 0.7em */
             color: #555;
         }
 
         .produto a {
             display: block;
             text-align: center;
-            padding: 8px;
+            padding: 6px; /* Reduzido de 8px para diminuir o espaçamento */
             background-color: #28a745;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 8px; /* Reduzido de 10px para diminuir o espaçamento */
         }
 
         .produto a:hover {
@@ -131,7 +141,8 @@
 
     <img src="LogoMegaDesconto.png" alt="Mega Desconto" class="logo">
 
-    <div class="menu-lateral" id="menu-lateral"></div>
+    <div class="menu-lateral" id="menu-lateral">
+        <h2>Consultar Categorias</h2> </div>
 
     <h1>Mega Desconto - Afiliado Shopee</h1>
     <h1>Apresenta as 300 melhores ofertas do dia na Shopee</h1>
@@ -160,9 +171,10 @@
         .then(response => response.json())
         .then(cupons => {
             const listaCupons = document.getElementById('lista-cupons');
+            listaCupons.innerHTML += '<p style="font-size: 0.8em;">Cupons:</p>'; /*Reduzindo tamanho da fonte*/
             cupons.forEach(cupom => {
                 listaCupons.innerHTML += `
-                    <p>Cupom: <strong>${cupom.NumeroCupom}</strong> | Categoria: ${cupom.Categoria}</p>
+                    <p style="font-size: 0.7em;">Cupom: <strong>${cupom.NumeroCupom}</strong> | Categoria: ${cupom.Categoria}</p>
                 `;
             });
         })
@@ -170,7 +182,7 @@
 
         
         // Carregar categorias específicas para o menu lateral
-        fetch('./catMenu.json') // Atualizado para o novo nome do arquivo
+        fetch('./catMenu.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Erro HTTP! Status: ${response.status}`);
@@ -218,7 +230,7 @@
     // Exibir produtos na página
     function exibirProdutos(lista) {
         const container = document.getElementById('produtos');
-        container.innerHTML = ''; // Limpar produtos anteriores
+        container.innerHTML = '';
         lista.forEach(produto => {
             container.innerHTML += `
                 <div class="produto">
