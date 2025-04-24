@@ -284,8 +284,8 @@
     <div class="banner-lojas" id="banner-lojas"></div>
 
     <script>
-        // Carregar cupons
-        fetch('cupons.json')
+                // Carregar cupons
+                fetch('cupons.json')
             .then(response => response.json())
             .then(data => {
                 const cupons = document.getElementById('cupons');
@@ -331,8 +331,39 @@
                 });
             })
             .catch(error => console.error('Erro ao carregar menu:', error)); // Corrigido o uso do catch
-    
+
         let produtos = [];
+        let produtosVisiveis = 20; // Número inicial de produtos exibidos
+    
+        // Função para carregar mais produtos conforme o usuário rola a página
+        function carregarMaisProdutos() {
+            const container = document.getElementById('produtos');
+            const proximosProdutos = produtos.slice(container.childNodes.length, container.childNodes.length + produtosVisiveis);
+    
+            proximosProdutos.forEach(produto => {
+                container.innerHTML += `
+                    <div class="produto">
+                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                        <h2>${produto['Item Name']}</h2>
+                        <p>Preço: <strong>R$${produto.Price}</strong></p>
+                        <p>Loja: ${produto['Shop Name']}</p>
+                        <p>Categoria: ${produto.Categoria}</p>
+                        <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
+                    </div>
+                `;
+            });
+    
+            if (container.childNodes.length >= produtos.length) {
+                window.removeEventListener('scroll', verifiqueScroll); // Remove o evento se todos os produtos já foram carregados
+            }
+        }
+    
+        // Função para verificar o scroll do usuário
+        function verifiqueScroll() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+                carregarMaisProdutos();
+            }
+        }
     
         // Carregar produtos do JSON
         fetch('Produtos.json')
@@ -350,8 +381,9 @@
                     filtroCategoria.appendChild(option);
                 });
     
-                // Exibir todos os produtos inicialmente
-                exibirProdutos(produtos);
+                // Exibir os primeiros produtos e adicionar scroll progressivo
+                carregarMaisProdutos();
+                window.addEventListener('scroll', verifiqueScroll);
             })
             .catch(error => console.error('Erro ao carregar produtos:', error));
     
