@@ -1,0 +1,50 @@
+[
+    {
+        "nome": "Minas Estofados",
+        "Categoria": "Estofados",
+        "imagem": "https://static.wixstatic.com/media/c9ba0f_3fc954dc1ddc439fac8463fb40c236ad~mv2.jpg/v1/fill/w_148,h_65,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/c9ba0f_3fc954dc1ddc439fac8463fb40c236ad~mv2.jpg", 
+        "link": "https://www.minasestofados.com/"
+    },
+    {
+        "nome": "Hering Oficial",
+        "Categoria": "Moda",
+        "imagem": "https://cf.shopee.sg/file/29fe36870efbc2a393abca9cdf56a900", 
+        "link": "https://s.shopee.com.br/8zs8Ay65J2"
+    },
+    {
+        "nome": "Saia Jeans",
+        "Categoria": "Moda",
+        "imagem": "https://cf.shopee.sg/file/br-11134216-7r98o-m6idvfj72hd356", 
+        "link": "https://s.shopee.com.br/8pYhysnnPT"
+    },
+    {
+        "nome": "Jeans Shop",
+        "Categoria": "Moda",
+        "imagem": "https://cf.shopee.sg/file/br-11134233-7r98o-lntb442rq0cn71", 
+        "link": "https://s.shopee.com.br/xJSp3mUe"
+    },
+    {
+        "nome": "Lupo - Joy Básico",
+        "Categoria": "Moda",
+        "imagem": "https://cf.shopee.sg/file/br-11134004-7r98o-m7sc01xodnys94", 
+        "link": "https://s.shopee.com.br/7AQU0HrE3f"
+    },
+    {
+        "nome": "Eletrônicos Genai",
+        "Categoria": "Eletrônicos",
+        "imagem": "https://cf.shopee.sg/file/br-11134216-7r98o-lowwsyiun61he9", 
+        "link": "https://s.shopee.com.br/8zs8C7d05I"
+    },
+    {
+        "nome": "Brester Máquinas e Ferramentas",
+        "Categoria": "Máquinas e Ferramentas",
+        "imagem": "https://cf.shopee.sg/file/a61b61306b1072ff334260cd4b430359", 
+        "link": "https://s.shopee.com.br/6KrN1Rd1pU"
+    },
+    {
+        "nome": "40 Graus Moda Feminina",
+        "Categoria": "Moda Feminina",
+        "imagem": "https://cf.shopee.sg/file/br-11134216-7r98o-lvdj2hw421bbce", 
+        "link": "https://s.shopee.com.br/9zkfOZSZey"
+    }       
+]

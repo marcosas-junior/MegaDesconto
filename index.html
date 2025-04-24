@@ -5,260 +5,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Desconto - Afiliado Shopee</title>
     <style>
-        /* Estilos para a logo */
-        .logo {
-            position: absolute;
-            top: 5%;
-            left: 15%; /* Reduzido de 15% para diminuir o espaço */
-            width: 85px; /* Reduzido de 125px para diminuir o tamanho */
-            height: auto;
+        /* Estilo geral */
+            body {
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Um preto*/
+        margin-left: 0;
+        text-align: center;
         }
-
-        /* Estilos para o menu lateral */
-        .menu-lateral {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 160px; /* Reduzido de 250px para diminuir a largura */
-            background-color: #f4f4f4;
-            overflow-y: auto;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            padding-top: 50px; /* Reduzido de 60px para ajustar o espaçamento */
-        }
-
-        .menu-lateral h2 { /* Novo estilo para o título do menu */
-            padding: 10px;
-            text-align: center;
-            font-size: 0.9em; /* Tamanho da fonte 30% menor */
-            color: #ff6600;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
-
-
-        .menu-item {
-            padding: 10px; /* Reduzido de 15px para diminuir o espaçamento */
-            border-bottom: 1px solid #ddd;
+        /* Estilo do cabeçalho */
+        .cabecalho {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ff6600;
+            height: 100px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
             text-align: center;
         }
-
-        .menu-item img {
-            width: 56px; /* Reduzido de 80% para 56% */
+        .cabecalho img {
+            width: 100px;
             height: auto;
-            border-radius: 5px;
-            margin-bottom: 5px; /* Reduzido de 10px para diminuir o espaçamento */
+            margin-right: 15px;
         }
 
-        .menu-item a {
-            font-size: 0.84em; /* Reduzido de 16px para 0.84em (30% menor) */
-            color: #ff6600;
-            text-decoration: none;
+        /* Menu horizontal de categorias */
+        .menu-categorias {
+            display: flex;
+            overflow-x: auto;
+            background-color: #e0e0e0e0;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+        .menu-categorias-item {
+            text-align: center;
+            display: inline-block;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .menu-categorias-item img {
+            width: 80px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        .menu-categorias-item a {
             display: block;
-        }
-
-        .menu-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Ajuste no layout para evitar sobreposição */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin-left: 165px; /* Ajustado para que o menu não sobreponha (200px + 10px de margem) */
-            text-align: center;
-        }
-
-        h1 {
+            margin-top: 5px;
+            font-size: 0,9em;
+            text-decoration: none;
             color: #ff6600;
-            font-size: 1.2em; /* Reduzido o tamanho do título principal */
+            font-weight: bold;
         }
 
-        .banner, .filtros {
-            margin: 15px 0; /* Reduzido de 20px para diminuir o espaçamento */
-            padding: 8px; /* Reduzido de 10px para diminuir o espaçamento */
+        /* Filtros */
+        .filtros {
+            padding: 20px;
             background-color: #ff6600;
             color: white;
-            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
-        }
-
-        /* Adicionando estilos para os filtros */
-        .filtros {
+            margin: 20px 0;
+            border-radius: 10px;
             text-align: center;
-            margin-bottom: 15px; /* Reduzido de 20px para diminuir o espaçamento */
+        }
+        .filtros input, .filtros select {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            width: 200px;
+        }
+        .filtros button {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        /* Container para os produtos */
-        .container {
+        /* Apresentação dos produtos */
+        .produtos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 10px;
         }
-
         .produto {
             background-color: white;
-            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
-            padding: 12px; /* Reduzido de 15px para diminuir o espaçamento */
-            margin: 8px; /* Reduzido de 10px para diminuir o espaçamento */
-            width: 280px; /* Ligeiramente reduzido de 300px */
-            text-align: left;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Reduzido de 10px para diminuir a sombra */
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
         .produto img {
             width: 100%;
-            height: auto;
-            border-radius: 8px; /* Reduzido de 10px para diminuir o arredondamento */
+            border-radius: 10px;
         }
-
         .produto h2 {
-            font-size: 1em; /* Reduzido de 18px para 1em */
-            margin: 8px 0; /* Reduzido de 10px 0 para diminuir o espaçamento */
+            font-size: 18px;
+            margin: 10px 0;
         }
-
         .produto p {
-            font-size: 0.7em; /* Reduzido de 14px para 0.7em */
+            font-size: 14px;
             color: #555;
         }
-
         .produto a {
             display: block;
-            text-align: center;
-            padding: 6px; /* Reduzido de 8px para diminuir o espaçamento */
-            background-color: #28a745;
+            background-color: #ff6600;
             color: white;
+            padding: 10px;
+            text-align: center;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 8px; /* Reduzido de 10px para diminuir o espaçamento */
         }
 
-        .produto a:hover {
-            background-color: #218838;
+        /* Banner rotativo para cupons */
+        .cupons {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .cupons-item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+                /* Banner rotativo de lojas */
+                /* Banner de lojas atualizado */
+        .banner-lojas {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */
+            justify-content: center; /* Centraliza os itens na linha */
+            gap: 20px; /* Espaçamento uniforme entre os itens */
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px; /* Suaviza os cantos do banner */
+        }
+
+        .banner-lojas-item {
+            width: 150px; /* Tamanho uniforme para cada item */
+            background-color: #fff; /* Fundo branco para cada item */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            padding: 10px; /* Espaçamento interno */
+            text-align: center; /* Centraliza texto e imagem */
+        }
+
+        .banner-lojas-item img {
+            width: 100%; /* Imagens ocupam a largura do item */
+            height: auto;
+            border-radius: 8px; /* Suaviza as bordas das imagens */
+            margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+        }
+
+        .banner-lojas-item a {
+            text-decoration: none; /* Remove sublinhado */
+            color: #333; /* Cor do texto */
+            font-weight: bold;
+            display: block; /* Ocupa toda a largura */
+            margin-bottom: 5px; /* Espaço entre o nome e a categoria */
+        }
+
+        .banner-lojas-item p {
+            font-size: 14px; /* Tamanho menor para a categoria */
+            color: #777; /* Tom mais claro para o texto da categoria */
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <img src="LogoMegaDesconto.png" alt="Mega Desconto" class="logo">
+    <!-- Cabeçalho -->
+    <div class="cabecalho">
+        <img src="LogoMegaDesconto.png" alt="Mega Desconto">
+        Mega Desconto - Afiliado Shopee
+    </div>
 
-    <div class="menu-lateral" id="menu-lateral">
-        <h2>Consultar Categorias</h2> </div>
+    <!-- Menu horizontal de categorias -->
+    <div class="menu-categorias" id="menu-categorias"></div>
 
-    <h1>Mega Desconto - Afiliado Shopee</h1>
-    <h1>Apresenta as 300 melhores ofertas do dia na Shopee</h1>
-
+    <!-- Filtros -->
     <div class="filtros">
         <label for="filtro-categoria">Filtrar por Categoria: </label>
         <select id="filtro-categoria">
             <option value="">Todas</option>
         </select>
-        <br><br>
         <label for="filtro-nome">Filtrar por Nome: </label>
-        <input type="text" id="filtro-nome" placeholder="Digite parte do nome...">
+        <input type="text" id="filtro-nome" placeholder="Digite o nome">
         <button onclick="aplicarFiltros()">Filtrar</button>
     </div>
 
-    <div class="cupons">
-        <h2>Cupons Disponíveis</h2>
-        <div id="lista-cupons"></div>
-    </div>
+    <!-- Produtos -->
+    <div class="produtos" id="produtos"></div>
 
-    <div id="produtos" class="container"></div>
+    <!-- Banner rotativo para cupons -->
+    <div class="cupons" id="cupons"></div>
+
+    <!-- Banner rotativo de lojas -->
+    <div class="banner-lojas" id="banner-lojas"></div>
 
     <script>
         // Carregar cupons
         fetch('cupons.json')
-        .then(response => response.json())
-        .then(cupons => {
-            const listaCupons = document.getElementById('lista-cupons');
-            listaCupons.innerHTML += '<p style="font-size: 0.8em;">Cupons:</p>'; /*Reduzindo tamanho da fonte*/
-            cupons.forEach(cupom => {
-                listaCupons.innerHTML += `
-                    <p style="font-size: 0.7em;">Cupom: <strong>${cupom.NumeroCupom}</strong> | Categoria: ${cupom.Categoria}</p>
-                `;
-            });
-        })
-        .catch(error => console.error('Erro ao carregar cupons:', error));
-
-        
-        // Carregar categorias específicas para o menu lateral
-        fetch('./catMenu.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Erro HTTP! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then(categorias => {
-            const menuLateral = document.getElementById('menu-lateral');
-            categorias.forEach(categoria => {
-                menuLateral.innerHTML += `
-                    <div class="menu-item">
-                        <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
-                        <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
+            .then(response => response.json())
+            .then(data => {
+                const cupons = document.getElementById('cupons');
+                data.forEach(cupom => {
+                    cupons.innerHTML += `
+                        <div class="cupons-item">
+                            Cupom: ${cupom.NumeroCupom}, Categoria: ${cupom.Categoria}
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error('Erro ao carregar cupons:', error));
+    
+        // Carregar lojas
+        fetch('lojas.json')
+            .then(response => response.json())
+            .then(data => {
+                const bannerLojas = document.getElementById('banner-lojas');
+                data.forEach(loja => {
+                    bannerLojas.innerHTML += `
+                        <div class="banner-lojas-item">
+                            <img src="${loja.imagem}" alt="${loja.nome}">
+                            <a href="${loja.link}" target="_blank">${loja.nome}</a>
+                            <p>Categoria: ${loja.Categoria}</p> <!-- Exibe a categoria -->
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error('Erro ao carregar lojas:', error));
+    
+        // Carregar categorias
+        fetch('catMenu.json')
+            .then(response => response.json())
+            .then(data => {
+                const menuCategorias = document.getElementById('menu-categorias');
+                data.forEach(categoria => {
+                    menuCategorias.innerHTML += `
+                        <div class="menu-categorias-item">
+                            <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
+                            <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error('Erro ao carregar menu:', error)); // Corrigido o uso do catch
+    
+        let produtos = [];
+    
+        // Carregar produtos do JSON
+        fetch('Produtos.json')
+            .then(response => response.json())
+            .then(data => {
+                produtos = data;
+    
+                // Preencher opções de categorias no filtro
+                const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
+                const filtroCategoria = document.getElementById('filtro-categoria');
+                categorias.forEach(categoria => {
+                    const option = document.createElement('option');
+                    option.value = categoria;
+                    option.textContent = categoria;
+                    filtroCategoria.appendChild(option);
+                });
+    
+                // Exibir todos os produtos inicialmente
+                exibirProdutos(produtos);
+            })
+            .catch(error => console.error('Erro ao carregar produtos:', error));
+    
+        // Exibir produtos na página
+        function exibirProdutos(lista) {
+            const container = document.getElementById('produtos');
+            container.innerHTML = ''; // Limpa os produtos anteriores
+            lista.forEach(produto => {
+                container.innerHTML += `
+                    <div class="produto">
+                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                        <h2>${produto['Item Name']}</h2>
+                        <p>Preço: <strong>R$${produto.Price}</strong></p>
+                        <p>Loja: ${produto['Shop Name']}</p>
+                        <p>Categoria: ${produto.Categoria}</p>
+                        <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
                     </div>
                 `;
             });
-        })
-        .catch(error => console.error('Erro ao carregar menu:', error));
-
-
-        
-    let produtos = [];
-
-    // Carregar produtos do JSON
-    fetch('Produtos.json')
-        .then(response => response.json())
-        .then(data => {
-            produtos = data;
-
-            // Preencher opções de categorias no filtro
-            const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
-            const filtroCategoria = document.getElementById('filtro-categoria');
-            categorias.forEach(categoria => {
-                const option = document.createElement('option');
-                option.value = categoria;
-                option.textContent = categoria;
-                filtroCategoria.appendChild(option);
+        }
+    
+        // Aplicar filtros de nome e categoria
+        function aplicarFiltros() {
+            const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
+            const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
+    
+            const produtosFiltrados = produtos.filter(produto => {
+                const categoriaCorresponde = !filtroCategoria || produto.Categoria.toLowerCase() === filtroCategoria;
+                const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
+                return categoriaCorresponde && nomeCorresponde;
             });
-
-            // Exibir todos os produtos inicialmente
-            exibirProdutos(produtos);
-        })
-        .catch(error => console.error('Erro ao carregar produtos:', error));
-
-    // Exibir produtos na página
-    function exibirProdutos(lista) {
-        const container = document.getElementById('produtos');
-        container.innerHTML = '';
-        lista.forEach(produto => {
-            container.innerHTML += `
-                <div class="produto">
-                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                    <h2>${produto['Item Name']}</h2>
-                    <p>Preço: <strong>R$${produto.Price}</strong></p>
-                    <p>Loja: ${produto['Shop Name']}</p>
-                    <p>Categoria: ${produto.Categoria}</p>
-                    <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
-                </div>
-            `;
-        });
-    }
-
-    // Aplicar filtros de nome e categoria
-    function aplicarFiltros() {
-        const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
-        const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
-
-        const produtosFiltrados = produtos.filter(produto => {
-            const categoriaCorresponde = !filtroCategoria || produto.Categoria.toLowerCase() === filtroCategoria;
-            const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
-            return categoriaCorresponde && nomeCorresponde;
-        });
-
-        exibirProdutos(produtosFiltrados); // Atualiza a lista exibida
-    }
-</script>
-
+    
+            exibirProdutos(produtosFiltrados); // Atualiza a lista exibida
+        }
+    </script>
+    
 </body>
 </html>
