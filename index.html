@@ -175,6 +175,81 @@
             color: #777; /* Tom mais claro para o texto da categoria */
             margin: 0;
         }
+                /* Estilo do rodapé */
+        .rodape {
+            background-color: #333; /* Fundo escuro */
+            color: #fff; /* Texto branco */
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rodape-conteudo {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Torna o rodapé responsivo */
+        }
+
+        .rodape-esquerda {
+            text-align: left;
+            max-width: 50%;
+        }
+
+        .rodape-esquerda p {
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .rodape-esquerda a {
+            color: #ff6600; /* Destaque para o e-mail */
+            text-decoration: none;
+        }
+
+        .rodape-esquerda a:hover {
+            text-decoration: underline;
+        }
+
+        .rodape-direita {
+            text-align: right;
+            max-width: 50%;
+        }
+
+        .whatsapp-icon {
+            width: 25px; /* Ícone do WhatsApp pequeno */
+            height: auto;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .whatsapp-qr {
+            width: 100px; /* Tamanho do QR Code */
+            height: auto;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .rodape-direita p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .rodape-conteudo {
+                flex-direction: column;
+                text-align: center; /* Centraliza para telas menores */
+            }
+
+            .rodape-esquerda, .rodape-direita {
+                max-width: 100%; /* Expandem para toda a largura */
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -312,6 +387,31 @@
             exibirProdutos(produtosFiltrados); // Atualiza a lista exibida
         }
     </script>
-    
+ <!-- Rodapé -->
+<footer class="rodape">
+    <div class="rodape-conteudo">
+        <div class="rodape-esquerda">
+            <p>
+                <strong>Local:</strong> Passos-MG - CEP 37.903-364<br>
+                <strong>Criado e Desenvolvido por:</strong> JR Consultoria - Marcos Junior<br>
+                <strong>Todos os direitos reservados.</strong>
+            </p>
+            <p>
+                <a href="mailto:marcosasjunior@gmail.com">marcosasjunior@gmail.com</a>
+            </p>
+        </div>
+        <div class="rodape-direita">
+            <a href="https://wa.link/omm1lv" target="_blank">
+                <img src="LinkContatoWhatsApp.png" alt="WhatsApp" class="whatsapp-qr">
+            </a>
+            <p>
+                <a href="https://wa.link/omm1lv" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone WhatsApp" class="whatsapp-icon">
+                </a>
+                (35) 99214-4644
+            </p>
+        </div>
+    </div>
+</footer>   
 </body>
 </html>
