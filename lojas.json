@@ -46,5 +46,23 @@
         "Categoria": "Moda Feminina",
         "imagem": "https://cf.shopee.sg/file/br-11134216-7r98o-lvdj2hw421bbce", 
         "link": "https://s.shopee.com.br/9zkfOZSZey"
-    }       
+    },
+    {
+        "nome": "Polly Imports",
+        "Categoria": "Importados",
+        "imagem": "https://cf.shopee.sg/file/8cd827a4c285504a53e2678f176e401b", 
+        "link": "https://s.shopee.com.br/1Vm8VxFEQa"
+    },
+    {
+        "nome": "Mimorada Store",
+        "Categoria": "Utilidades de Casa",
+        "imagem": "https://cf.shopee.sg/file/br-11134004-7r98o-m1oikdf3ngug83", 
+        "link": "https://s.shopee.com.br/2fy62tjknd"
+    },
+    {
+        "nome": "Max Casa",
+        "Categoria": "Utilidades Geral",
+        "imagem": "https://cf.shopee.sg/file/br-11134216-7r98o-luktltlvcnl169", 
+        "link": "https://s.shopee.com.br/2qHWH04LUu"
+    }
 ]
