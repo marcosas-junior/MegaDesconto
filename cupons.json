@@ -4,20 +4,31 @@
         "Loja": "Hering Oficial",
         "Validade": "13/05/2025",
         "Condição": "Nas Compras acima de R$ 89,99",
-        "Categoria": "Moda"
+        "Categoria": "Moda",
+        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
     },
     {
         "NumeroCupom": "10% OFF",
         "Loja": "Hering Oficial",
         "Validade": "31/05/2025",
         "Condição": "Nas Compras acima de R$ 149,99",
-        "Categoria": "Moda"
+        "Categoria": "Moda",
+        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
     },
     {
         "NumeroCupom": "R$10 OFF",
         "Loja": "Hering Oficial",
         "Validade": "02/05/2025",
         "Condição": "Nas Compras acima de R$99,00",
-        "Categoria": "Moda"
+        "Categoria": "Moda",
+        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
+    },
+    {
+        "NumeroCupom": "R$15 OFF",
+        "Loja": "Mimorada",	
+        "Validade": "31/05/2025",
+        "Condição": "Nas Compras acima de R$100,00",
+        "Categoria": "Utensílios de Casa",
+        "Link Loja": "https://s.shopee.com.br/2LLNbXBxFU"
     }
 ]
