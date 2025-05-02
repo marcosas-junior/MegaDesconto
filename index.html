@@ -7,25 +7,25 @@
     <style>
         /* Estilo geral */
         body {
-        margin: 0; /* Remove margens padrão */
-        padding-top: 50px; /* Espaço para o menu fixo */
+        margin: 0;
+        padding-top: 50px;
         font-family: Arial, sans-serif;
-        background-color: #000; /* Um preto*/
+        background-color: #000;
         margin-left: 0;
         text-align: center;
         }
         
         .banner-titulo {
-        font-size: 24px; /* Tamanho grande para destaque */
+        font-size: 24px;
         font-weight: bold;
-        color: #ff6600; /* Cor laranja para harmonizar com o tema */
-        text-align: center; /* Centralizado acima do banner */
-        margin: 20px 0 10px; /* Espaçamento superior e inferior */
+        color: #ff6600;
+        text-align: center;
+        margin: 20px 0 10px;
         }
 
         /* Estilo do cabeçalho */
         .cabecalho {
-            position: relative; /* Torna o cabeçalho independente do fluxo do menu */
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,12 +45,12 @@
         .menu-navegacao {
             background-color: #333;
             color: white;
-            padding: 15px 0; /* Espaçamento superior e inferior */
+            padding: 15px 0;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
         }
 
@@ -60,7 +60,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 20px; /* Espaçamento entre os itens */
+            gap: 20px;
         }
 
         .menu-navegacao ul li {
@@ -72,7 +72,7 @@
             text-decoration: none;
             font-weight: bold;
             padding: 10px 15px;
-            transition: background-color 0.3s ease; /* Efeito suave */
+            transition: background-color 0.3s ease;
         }
 
         .menu-navegacao ul li a:hover {
@@ -148,6 +148,7 @@
             padding: 10px;
             width: 300px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Posição relativa para o ícone de compartilhamento */
         }
         .produto img {
             width: 100%;
@@ -170,82 +171,97 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .compartilhar-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute; /* Posição absoluta dentro do produto */
+            top: 10px;      /* Ajuste a posição vertical conforme necessário */
+            right: 10px;    /* Ajuste a posição horizontal conforme necessário */
+            z-index: 1;      /* Garante que o ícone esteja acima do conteúdo do produto */
+        }
+
+        .compartilhar-btn img {
+            width: 20px;    /* Tamanho desejado para o ícone */
+            height: 20px;
+        }
+
 
         /* Banner rotativo para cupons */
         .cupons {
-            display: flex; /* Organiza os itens em linha */
-            overflow-x: auto; /* Adiciona rolagem horizontal caso os itens ultrapassem a largura */
-            gap: 20px; /* Espaçamento uniforme entre os itens */
-            background-color: #ff6600; /* Fundo cinza para destaque */
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            background-color: #ff6600;
             padding: 20px;
-            border-radius: 10px; /* Bordas arredondadas */
+            border-radius: 10px;
         }
 
         .cupons-item {
-            min-width: 300px; /* Largura mínima para cada item */
-            background-color: #fff; /* Fundo branco para destaque */
-            border-radius: 10px; /* Bordas arredondadas */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-            padding: 15px; /* Espaçamento interno */
-            text-align: left; /* Texto alinhado à esquerda */
+            min-width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: left;
         }
 
         .cupons-item p {
-            margin: 5px 0; /* Espaçamento entre os parágrafos */
-            font-size: 14px; /* Tamanho padrão para legibilidade */
-            color: #333; /* Cor neutra para texto */
+            margin: 5px 0;
+            font-size: 14px;
+            color: #333;
         }
 
                 /* Banner rotativo de lojas */
                 /* Banner de lojas atualizado */
         .banner-lojas {
             display: flex;
-            flex-wrap: wrap; /* Permite que os itens sejam distribuídos em várias linhas */
-            justify-content: center; /* Centraliza os itens na linha */
-            gap: 20px; /* Espaçamento uniforme entre os itens */
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             background-color: #f9f9f9;
             padding: 20px;
             text-align: center;
-            border-radius: 10px; /* Suaviza os cantos do banner */
+            border-radius: 10px;
         }
 
         .banner-lojas-item {
-            width: 150px; /* Tamanho uniforme para cada item */
-            background-color: #fff; /* Fundo branco para cada item */
-            border-radius: 10px; /* Bordas arredondadas */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-            padding: 10px; /* Espaçamento interno */
-            text-align: center; /* Centraliza texto e imagem */
+            width: 150px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
         }
 
         .banner-lojas-item img {
-            width: 100%; /* Imagens ocupam a largura do item */
+            width: 100%;
             height: auto;
-            border-radius: 8px; /* Suaviza as bordas das imagens */
-            margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
         .banner-lojas-item a {
-            text-decoration: none; /* Remove sublinhado */
-            color: #333; /* Cor do texto */
+            text-decoration: none;
+            color: #333;
             font-weight: bold;
-            display: block; /* Ocupa toda a largura */
-            margin-bottom: 5px; /* Espaço entre o nome e a categoria */
+            display: block;
+            margin-bottom: 5px;
         }
 
         .banner-lojas-item p {
-            font-size: 14px; /* Tamanho menor para a categoria */
-            color: #777; /* Tom mais claro para o texto da categoria */
+            font-size: 14px;
+            color: #777;
             margin: 0;
         }
                 /* Estilo do rodapé */
         .rodape {
-            background-color: #333; /* Fundo escuro */
-            color: #fff; /* Texto branco */
+            background-color: #333;
+            color: #fff;
             padding: 20px;
             text-align: center;
             display: flex;
-            flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
@@ -255,7 +271,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap; /* Torna o rodapé responsivo */
+            flex-wrap: wrap;
         }
 
         .rodape-esquerda {
@@ -270,7 +286,7 @@
         }
 
         .rodape-esquerda a {
-            color: #ff6600; /* Destaque para o e-mail */
+            color: #ff6600;
             text-decoration: none;
         }
 
@@ -284,14 +300,14 @@
         }
 
         .whatsapp-icon {
-            width: 25px; /* Ícone do WhatsApp pequeno */
+            width: 25px;
             height: auto;
             margin-right: 5px;
             vertical-align: middle;
         }
 
         .whatsapp-qr {
-            width: 100px; /* Tamanho do QR Code */
+            width: 100px;
             height: auto;
             margin: 10px 0;
             border-radius: 5px;
@@ -305,11 +321,11 @@
         @media (max-width: 768px) {
             .rodape-conteudo {
                 flex-direction: column;
-                text-align: center; /* Centraliza para telas menores */
+                text-align: center;
             }
 
             .rodape-esquerda, .rodape-direita {
-                max-width: 100%; /* Expandem para toda a largura */
+                max-width: 100%;
                 margin-bottom: 10px;
             }
         }
@@ -317,14 +333,12 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
     <div class="cabecalho">
         <img src="LogoMegaDesconto.png" alt="Mega Desconto">
         Mega Desconto - Afiliado Shopee
     </div>
 
-        <!-- Menu de navegação com âncoras -->
-    <nav class="menu-navegacao">
+        <nav class="menu-navegacao">
         <ul>
             <li><a href="#menu-categorias">Categorias</a></li>
             <li><a href="#produtos">Produtos</a></li>
@@ -334,11 +348,9 @@
         </ul>
     </nav>
 
-    <!-- Menu horizontal de categorias -->
     <h2 class="banner-titulo">Menu Categorias</h2>
     <div class="menu-categorias" id="menu-categorias"></div>
 
-    <!-- Filtros -->
     <div class="filtros">
         <label for="filtro-categoria">Filtrar por Categoria: </label>
         <select id="filtro-categoria">
@@ -349,21 +361,18 @@
         <button onclick="aplicarFiltros()">Filtrar</button>
     </div>
 
-    <!-- Produtos -->
     <div class="produtos" id="produtos"></div>
 
-    <!-- Banner rotativo para cupons -->
+
     <h2 class="banner-titulo">Cupons Disponíveis</h2>
     <div class="cupons" id="cupons"></div>
 
-    <!-- Banner rotativo de lojas -->
     <h2 class="banner-titulo">Lojas Oficiais</h2>
     <div class="banner-lojas" id="banner-lojas"></div>
 
     <footer id="contato" class="rodape">
         <div class="rodape-conteudo">
-            <!-- Conteúdo do rodapé -->
-        </div>
+            </div>
     </footer>
     
 
@@ -374,7 +383,7 @@
             .then(response => response.json())
             .then(data => {
                 const cupons = document.getElementById('cupons');
-                cupons.innerHTML = ''; // Limpa conteúdo anterior, se necessário
+                cupons.innerHTML = '';
                 data.forEach(cupom => {
                     cupons.innerHTML += `
                         <div class="cupons-item">
@@ -402,7 +411,7 @@
                         <div class="banner-lojas-item">
                             <img src="${loja.imagem}" alt="${loja.nome}">
                             <a href="${loja.link}" target="_blank">${loja.nome}</a>
-                            <p>Categoria: ${loja.Categoria}</p> <!-- Exibe a categoria -->
+                            <p>Categoria: ${loja.Categoria}</p>
                         </div>
                     `;
                 });
@@ -423,12 +432,11 @@
                     `;
                 });
             })
-            .catch(error => console.error('Erro ao carregar menu:', error)); // Corrigido o uso do catch
+            .catch(error => console.error('Erro ao carregar menu:', error));
 
         let produtos = [];
-        let produtosVisiveis = 20; // Número inicial de produtos exibidos
+        let produtosVisiveis = 20;
     
-        // Função para carregar mais produtos conforme o usuário rola a página chamado tecnicamente de Lazy Loading
         function carregarMaisProdutos() {
             const container = document.getElementById('produtos');
             const proximosProdutos = produtos.slice(container.childNodes.length, container.childNodes.length + produtosVisiveis);
@@ -442,16 +450,18 @@
                         <p>Loja: ${produto['Shop Name']}</p>
                         <p>Categoria: ${produto.Categoria}</p>
                         <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
+                        <button class="compartilhar-btn" onclick="compartilharProduto('${produto['Offer Link']}')">
+                            <img src="icone-share.webp" alt="Compartilhar">
+                        </button>
                     </div>
                 `;
             });
     
             if (container.childNodes.length >= produtos.length) {
-                window.removeEventListener('scroll', verifiqueScroll); // Remove o evento se todos os produtos já foram carregados
+                window.removeEventListener('scroll', verifiqueScroll);
             }
         }
     
-        // Função para verificar o scroll do usuário
         function verifiqueScroll() {
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
                 carregarMaisProdutos();
@@ -464,7 +474,6 @@
             .then(data => {
                 produtos = data;
     
-                // Preencher opções de categorias no filtro
                 const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
                 const filtroCategoria = document.getElementById('filtro-categoria');
                 categorias.forEach(categoria => {
@@ -474,16 +483,14 @@
                     filtroCategoria.appendChild(option);
                 });
     
-                // Exibir os primeiros produtos e adicionar scroll progressivo
                 carregarMaisProdutos();
                 window.addEventListener('scroll', verifiqueScroll);
             })
             .catch(error => console.error('Erro ao carregar produtos:', error));
     
-        // Exibir produtos na página
         function exibirProdutos(lista) {
             const container = document.getElementById('produtos');
-            container.innerHTML = ''; // Limpa os produtos anteriores
+            container.innerHTML = '';
             lista.forEach(produto => {
                 container.innerHTML += `
                     <div class="produto">
@@ -493,12 +500,41 @@
                         <p>Loja: ${produto['Shop Name']}</p>
                         <p>Categoria: ${produto.Categoria}</p>
                         <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
+                        <button class="compartilhar-btn" onclick="compartilharProduto('${produto['Offer Link']}')">
+                            <img src="icone-share.webp" alt="Compartilhar">
+                        </button>
                     </div>
                 `;
             });
         }
+
+        function compartilharProduto(link) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Confira este produto!',
+                    url: link
+                })
+                .then(() => console.log('Compartilhado com sucesso'))
+                .catch(error => {
+                    console.error('Erro ao compartilhar:', error);
+                    if (error.name === 'AbortError') {
+                        console.log('Compartilhamento cancelado pelo usuário.');
+                    } else if (error.name === 'NotAllowedError') {
+                        console.error('Permissão negada para compartilhar.');
+                    } else {
+                         console.error('Erro desconhecido ao compartilhar.');
+                    }
+                    navigator.clipboard.writeText(link)
+                    .then(() => alert('Link copiado para a área de transferência!'))
+                    .catch(error => console.error('Erro ao copiar link:', error));
+                });
+            } else {
+                navigator.clipboard.writeText(link)
+                .then(() => alert('Link copiado para a área de transferência!'))
+                .catch(error => console.error('Erro ao copiar link:', error));
+            }
+        }
     
-        // Aplicar filtros de nome e categoria
         function aplicarFiltros() {
             const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
             const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
@@ -509,10 +545,10 @@
                 return categoriaCorresponde && nomeCorresponde;
             });
     
-            exibirProdutos(produtosFiltrados); // Atualiza a lista exibida
+            exibirProdutos(produtosFiltrados);
         }
     </script>
- <!-- Rodapé -->
+ 
 <footer class="rodape">
     <div class="rodape-conteudo">
         <div class="rodape-esquerda">
