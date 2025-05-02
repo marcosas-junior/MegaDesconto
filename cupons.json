@@ -1,34 +1,58 @@
 [
     {
-        "NumeroCupom": "5% OFF",
-        "Loja": "Hering Oficial",
-        "Validade": "13/05/2025",
-        "Condição": "Nas Compras acima de R$ 89,99",
-        "Categoria": "Moda",
-        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
-    },
-    {
-        "NumeroCupom": "10% OFF",
-        "Loja": "Hering Oficial",
+        "NumeroCupom": "6 Cupons de Frete Grátis",
+        "Loja": "Produtos com Selo Shopee",
         "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$ 149,99",
-        "Categoria": "Moda",
-        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
+        "Condição": "Nas Compras acima de R$ 19,00",
+        "Categoria": "Todas",
+        "Link Loja": "hhttps://s.shopee.com.br/4AmhBIqXNN"
     },
     {
-        "NumeroCupom": "R$10 OFF",
-        "Loja": "Hering Oficial",
-        "Validade": "02/05/2025",
-        "Condição": "Nas Compras acima de R$99,00",
+        "NumeroCupom": "Cupom de Frete Grátis",
+        "Loja": "Lojas Oficiais",
+        "Validade": "31/05/2025",
+        "Condição": "Nas Compras acima de R$ 10,00",
+        "Categoria": "Lojas Oficiais",
+        "Link Loja": "https://s.shopee.com.br/1Vm8VxFEQa"
+    },
+    {
+        "NumeroCupom": "25% OFF",
+        "Loja": "Lojas Oficiais Calçados",
+        "Validade": "31/05/2025",
+        "Condição": "Limitado a R$ 10,00",
+        "Categoria": "Lojas Oficiais",
+        "Link Loja": "hhttps://s.shopee.com.br/AUgki4JNCO"
+    },
+    {
+        "NumeroCupom": "R$35 de Desconto",
+        "Loja": "Lojas Oficiais",
+        "Validade": "31/05/2025",
+        "Condição": "Nas Compras acima de R$ 259,00",
+        "Categoria": "Lojas Oficiais",
+        "Link Loja": "https://s.shopee.com.br/9zkfOZSZey"
+    },
+    {
+        "NumeroCupom": "R$25 de Desconto",
+        "Loja": "Lojas de Moda",
+        "Validade": "31/05/2025",
+        "Condição": "Nas Compras acima de R$179,00",
         "Categoria": "Moda",
-        "Link Loja": "https://s.shopee.com.br/1g5go1hlK1"
+        "Link Loja": "https://s.shopee.com.br/6pnSKgN9zn"
+    },
+    {
+        "NumeroCupom": "R$30 de Desconto",
+        "Loja": "Lojas de Moda",
+        "Validade": "31/05/2025",
+        "Condição": "Nas Compras acima de R$279,00",
+        "Categoria": "Moda",
+        "Link Loja": "hhttps://s.shopee.com.br/8zrwvGLxrM"
     },
     {
         "NumeroCupom": "R$15 OFF",
         "Loja": "Mimorada",	
         "Validade": "31/05/2025",
         "Condição": "Nas Compras acima de R$100,00",
-        "Categoria": "Utensílios do Lar",
+        "Categoria": "Utensílios de Casa",
         "Link Loja": "https://s.shopee.com.br/2LLNbXBxFU"
     }
 ]
