@@ -214,6 +214,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 15px;
             text-align: left;
+            position: relative;
         }
 
         .cupons-item p {
@@ -222,11 +223,7 @@
             color: #333;
         }
 
-        .cupons .compartilhar-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
+
 
         /* Banner rotativo de lojas */
         .banner-lojas {
@@ -455,7 +452,7 @@
                     `;
 
                     const compartilharBtn = document.createElement('button');
-                    compartilharBtn.className = 'compartilhar-btn compartilhar-btn-loja'; // Adiciona classe específica
+                    compartilharBtn.className = 'compartilhar-btn compartilhar-btn-loja';
                     compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
                     compartilharBtn.addEventListener('click', () => compartilharProduto(loja.link));
 
