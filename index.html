@@ -7,20 +7,20 @@
     <style>
         /* Estilo geral */
         body {
-        margin: 0;
-        padding-top: 50px;
-        font-family: Arial, sans-serif;
-        background-color: #000;
-        margin-left: 0;
-        text-align: center;
+            margin: 0;
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin-left: 0;
+            text-align: center;
         }
-        
+
         .banner-titulo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #ff6600;
-        text-align: center;
-        margin: 20px 0 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6600;
+            text-align: center;
+            margin: 20px 0 10px;
         }
 
         /* Estilo do cabeçalho */
@@ -87,12 +87,14 @@
             background-color: #e0e0e0e0;
             padding: 10px 0;
             white-space: nowrap;
+            position: relative; /* Para posicionar o botão de compartilhar */
         }
         .menu-categorias-item {
             text-align: center;
             display: inline-block;
             text-align: center;
             margin: 0 10px;
+            position: relative; /* Posição relativa para o ícone de compartilhamento */
         }
         .menu-categorias-item img {
             width: 80px;
@@ -107,6 +109,13 @@
             text-decoration: none;
             color: #ff6600;
             font-weight: bold;
+        }
+
+        .menu-categorias-item .compartilhar-btn {
+            position: absolute;
+            top: 1px;
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajuste extra para centralizar precisamente */
         }
 
         /* Filtros */
@@ -195,6 +204,7 @@
             background-color: #ff6600;
             padding: 20px;
             border-radius: 10px;
+            position: relative; /* Para posicionar o botão de compartilhar */
         }
 
         .cupons-item {
@@ -212,8 +222,13 @@
             color: #333;
         }
 
-                /* Banner rotativo de lojas */
-                /* Banner de lojas atualizado */
+        .cupons .compartilhar-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* Banner rotativo de lojas */
         .banner-lojas {
             display: flex;
             flex-wrap: wrap;
@@ -223,6 +238,7 @@
             padding: 20px;
             text-align: center;
             border-radius: 10px;
+            position: relative; /* Para posicionar o botão de compartilhar */
         }
 
         .banner-lojas-item {
@@ -232,6 +248,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 10px;
             text-align: center;
+            position: relative; /* Posição relativa para o ícone de compartilhamento */
         }
 
         .banner-lojas-item img {
@@ -254,7 +271,20 @@
             color: #777;
             margin: 0;
         }
-                /* Estilo do rodapé */
+
+        .banner-lojas .compartilhar-btn {
+            position: absolute;
+            top: 5px;
+            left: 10px; /* Altera para canto superior esquerdo */
+            z-index: 1;
+        }
+
+        .banner-lojas .compartilhar-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Estilo do rodapé */
         .rodape {
             background-color: #333;
             color: #fff;
@@ -385,18 +415,26 @@
                 const cupons = document.getElementById('cupons');
                 cupons.innerHTML = '';
                 data.forEach(cupom => {
-                    cupons.innerHTML += `
-                        <div class="cupons-item">
-                            <p><strong>Desconto:</strong> ${cupom.NumeroCupom}</p>
-                            <p>
+                    const cupomDiv = document.createElement('div');
+                    cupomDiv.className = 'cupons-item';
+                    cupomDiv.innerHTML = `
+                        <p><strong>Desconto:</strong> ${cupom.NumeroCupom}</p>
+                        <p>
                             <strong>Loja:</strong>
                             <a href="${cupom['Link']}" target="_blank">${cupom.Loja}</a>
-                            </p>
-                            <p><strong>Validade:</strong> ${cupom.Validade}</p>
-                            <p><strong>Condição:</strong> ${cupom.Condição}</p>
-                            <p><strong>Categoria:</strong> ${cupom.Categoria}</p>
-                        </div>
+                        </p>
+                        <p><strong>Validade:</strong> ${cupom.Validade}</p>
+                        <p><strong>Condição:</strong> ${cupom.Condição}</p>
+                        <p><strong>Categoria:</strong> ${cupom.Categoria}</p>
                     `;
+
+                    const compartilharBtn = document.createElement('button');
+                    compartilharBtn.className = 'compartilhar-btn';
+                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                    compartilharBtn.addEventListener('click', () => compartilharProduto(cupom['Link']));
+
+                    cupomDiv.appendChild(compartilharBtn);
+                    cupons.appendChild(cupomDiv);
                 });
             })
             .catch(error => console.error('Erro ao carregar cupons:', error));
@@ -406,14 +444,23 @@
             .then(response => response.json())
             .then(data => {
                 const bannerLojas = document.getElementById('banner-lojas');
+                bannerLojas.innerHTML = '';
                 data.forEach(loja => {
-                    bannerLojas.innerHTML += `
-                        <div class="banner-lojas-item">
-                            <img src="${loja.imagem}" alt="${loja.nome}">
-                            <a href="${loja.link}" target="_blank">${loja.nome}</a>
-                            <p>Categoria: ${loja.Categoria}</p>
-                        </div>
+                    const lojaDiv = document.createElement('div');
+                    lojaDiv.className = 'banner-lojas-item';
+                    lojaDiv.innerHTML = `
+                        <img src="${loja.imagem}" alt="${loja.nome}">
+                        <a href="${loja.link}" target="_blank">${loja.nome}</a>
+                        <p>Categoria: ${loja.Categoria}</p>
                     `;
+
+                    const compartilharBtn = document.createElement('button');
+                    compartilharBtn.className = 'compartilhar-btn compartilhar-btn-loja'; // Adiciona classe específica
+                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                    compartilharBtn.addEventListener('click', () => compartilharProduto(loja.link));
+
+                    lojaDiv.appendChild(compartilharBtn);
+                    bannerLojas.appendChild(lojaDiv);
                 });
             })
             .catch(error => console.error('Erro ao carregar lojas:', error));
@@ -423,13 +470,22 @@
             .then(response => response.json())
             .then(data => {
                 const menuCategorias = document.getElementById('menu-categorias');
+                menuCategorias.innerHTML = '';
                 data.forEach(categoria => {
-                    menuCategorias.innerHTML += `
-                        <div class="menu-categorias-item">
-                            <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
-                            <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
-                        </div>
+                    const categoriaDiv = document.createElement('div');
+                    categoriaDiv.className = 'menu-categorias-item';
+                    categoriaDiv.innerHTML = `
+                        <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
+                        <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
                     `;
+
+                    const compartilharBtn = document.createElement('button');
+                    compartilharBtn.className = 'compartilhar-btn';
+                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                    compartilharBtn.addEventListener('click', () => compartilharProduto(categoria.LinkAfiliado));
+
+                    categoriaDiv.appendChild(compartilharBtn);
+                    menuCategorias.appendChild(categoriaDiv);
                 });
             })
             .catch(error => console.error('Erro ao carregar menu:', error));
@@ -442,19 +498,24 @@
             const proximosProdutos = produtos.slice(container.childNodes.length, container.childNodes.length + produtosVisiveis);
     
             proximosProdutos.forEach(produto => {
-                container.innerHTML += `
-                    <div class="produto">
-                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                        <h2>${produto['Item Name']}</h2>
-                        <p>Preço: <strong>R$${produto.Price}</strong></p>
-                        <p>Loja: ${produto['Shop Name']}</p>
-                        <p>Categoria: ${produto.Categoria}</p>
-                        <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
-                        <button class="compartilhar-btn" onclick="compartilharProduto('${produto['Offer Link']}')">
-                            <img src="icone-share.webp" alt="Compartilhar">
-                        </button>
-                    </div>
+                const produtoDiv = document.createElement('div');
+                produtoDiv.className = 'produto';
+                produtoDiv.innerHTML = `
+                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    <h2>${produto['Item Name']}</h2>
+                    <p>Preço: <strong>R$${produto.Price}</strong></p>
+                    <p>Loja: ${produto['Shop Name']}</p>
+                    <p>Categoria: ${produto.Categoria}</p>
+                    <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
                 `;
+
+                const compartilharBtn = document.createElement('button');
+                compartilharBtn.className = 'compartilhar-btn';
+                compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                compartilharBtn.addEventListener('click', () => compartilharProduto(produto['Offer Link']));
+
+                produtoDiv.appendChild(compartilharBtn);
+                container.appendChild(produtoDiv);
             });
     
             if (container.childNodes.length >= produtos.length) {
@@ -492,19 +553,24 @@
             const container = document.getElementById('produtos');
             container.innerHTML = '';
             lista.forEach(produto => {
-                container.innerHTML += `
-                    <div class="produto">
-                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                        <h2>${produto['Item Name']}</h2>
-                        <p>Preço: <strong>R$${produto.Price}</strong></p>
-                        <p>Loja: ${produto['Shop Name']}</p>
-                        <p>Categoria: ${produto.Categoria}</p>
-                        <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
-                        <button class="compartilhar-btn" onclick="compartilharProduto('${produto['Offer Link']}')">
-                            <img src="icone-share.webp" alt="Compartilhar">
-                        </button>
-                    </div>
+                const produtoDiv = document.createElement('div');
+                produtoDiv.className = 'produto';
+                produtoDiv.innerHTML = `
+                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    <h2>${produto['Item Name']}</h2>
+                    <p>Preço: <strong>R$${produto.Price}</strong></p>
+                    <p>Loja: ${produto['Shop Name']}</p>
+                    <p>Categoria: ${produto.Categoria}</p>
+                    <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
                 `;
+
+                const compartilharBtn = document.createElement('button');
+                compartilharBtn.className = 'compartilhar-btn';
+                compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                compartilharBtn.addEventListener('click', () => compartilharProduto(produto['Offer Link']));
+
+                produtoDiv.appendChild(compartilharBtn);
+                container.appendChild(produtoDiv);
             });
         }
 
