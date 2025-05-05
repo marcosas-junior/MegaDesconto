@@ -142,6 +142,15 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        #cancelar-filtro {
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
 
         /* Apresentação dos produtos */
         .produtos {
@@ -194,7 +203,6 @@
             width: 20px;    /* Tamanho desejado para o ícone */
             height: 20px;
         }
-
 
         /* Banner rotativo para cupons */
         .cupons {
@@ -356,6 +364,44 @@
                 margin-bottom: 10px;
             }
         }
+
+        /* Estilos para a mensagem de não encontrado */
+        #mensagem-nao-encontrado {
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff6600;
+        }
+
+        #mensagem-nao-encontrado h3 {
+            color: #ff6600;
+            margin-bottom: 10px;
+        }
+
+        #mensagem-nao-encontrado ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        #mensagem-nao-encontrado ul li {
+            margin: 5px 0;
+        }
+
+        #mensagem-nao-encontrado ul li a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        #mensagem-nao-encontrado ul li a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
@@ -386,9 +432,17 @@
         <label for="filtro-nome">Filtrar por Nome: </label>
         <input type="text" id="filtro-nome" placeholder="Digite o nome">
         <button onclick="aplicarFiltros()">Filtrar</button>
+        <button id="cancelar-filtro" onclick="cancelarFiltro()">Cancelar</button>
     </div>
 
     <div class="produtos" id="produtos"></div>
+    <div id="mensagem-nao-encontrado" style="display:none;">
+        <h3>Produto não encontrado!</h3>
+        <p>Não encontramos este produto nas 300 melhores ofertas.</p>
+        <p>Você pode encontrá-lo em uma de nossas categorias:</p>
+        <ul id="categorias-nao-encontrado">
+            </ul>
+    </div>
 
 
     <h2 class="banner-titulo">Cupons Disponíveis</h2>
@@ -446,8 +500,10 @@
                     const lojaDiv = document.createElement('div');
                     lojaDiv.className = 'banner-lojas-item';
                     lojaDiv.innerHTML = `
-                        <img src="${loja.imagem}" alt="${loja.nome}">
-                        <a href="${loja.link}" target="_blank">${loja.nome}</a>
+                        <a href="${loja.link}" target="_blank">
+                            <img src="${loja.imagem}" alt="${loja.nome}">
+                            <p>${loja.nome}</p>
+                        </a>
                         <p>Categoria: ${loja.Categoria}</p>
                     `;
 
@@ -472,8 +528,10 @@
                     const categoriaDiv = document.createElement('div');
                     categoriaDiv.className = 'menu-categorias-item';
                     categoriaDiv.innerHTML = `
-                        <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
-                        <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
+                        <a href="${categoria.LinkAfiliado}" target="_blank">
+                            <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
+                            <p>${categoria['Categorias Específicas']}</p>
+                        </a>
                     `;
 
                     const compartilharBtn = document.createElement('button');
@@ -489,7 +547,9 @@
 
         let produtos = [];
         let produtosVisiveis = 20;
-    
+        let categoriasData = []; // Variável para armazenar os dados das categorias
+
+
         function carregarMaisProdutos() {
             const container = document.getElementById('produtos');
             const proximosProdutos = produtos.slice(container.childNodes.length, container.childNodes.length + produtosVisiveis);
@@ -498,7 +558,9 @@
                 const produtoDiv = document.createElement('div');
                 produtoDiv.className = 'produto';
                 produtoDiv.innerHTML = `
-                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    <a href="${produto['Offer Link']}" target="_blank">
+                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    </a>
                     <h2>${produto['Item Name']}</h2>
                     <p>Preço: <strong>R$${produto.Price}</strong></p>
                     <p>Loja: ${produto['Shop Name']}</p>
@@ -545,15 +607,46 @@
                 window.addEventListener('scroll', verifiqueScroll);
             })
             .catch(error => console.error('Erro ao carregar produtos:', error));
-    
+        
+        // Carrega as categorias do arquivo catMenu.json
+        fetch('catMenu.json')
+            .then(response => response.json())
+            .then(data => {
+                categoriasData = data; // Armazena os dados das categorias
+            })
+            .catch(error => console.error('Erro ao carregar categorias:', error));
+
         function exibirProdutos(lista) {
             const container = document.getElementById('produtos');
             container.innerHTML = '';
-            lista.forEach(produto => {
-                const produtoDiv = document.createElement('div');
-                produtoDiv.className = 'produto';
-                produtoDiv.innerHTML = `
-                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+            const mensagemNaoEncontrado = document.getElementById('mensagem-nao-encontrado');
+
+
+            if (lista.length === 0) {
+                mensagemNaoEncontrado.style.display = 'block';
+                const listaCategoriasElement = document.getElementById('categorias-nao-encontrado');
+                listaCategoriasElement.innerHTML = ''; // Limpa qualquer conteúdo anterior
+
+                categoriasData.forEach(categoria => {
+                    const li = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = categoria.LinkAfiliado;
+                    link.textContent = categoria['Categorias Específicas'];
+                    li.appendChild(link);
+                    listaCategoriasElement.appendChild(li);
+                });
+                container.style.display='none';
+
+            } else {
+                mensagemNaoEncontrado.style.display = 'none';
+                container.style.display='flex';
+                lista.forEach(produto => {
+                    const produtoDiv = document.createElement('div');
+                    produtoDiv.className = 'produto';
+                    produtoDiv.innerHTML = `
+                        <a href="${produto['Offer Link']}" target="_blank">
+                            <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                    </a>
                     <h2>${produto['Item Name']}</h2>
                     <p>Preço: <strong>R$${produto.Price}</strong></p>
                     <p>Loja: ${produto['Shop Name']}</p>
@@ -568,7 +661,8 @@
 
                 produtoDiv.appendChild(compartilharBtn);
                 container.appendChild(produtoDiv);
-            });
+                });
+            }
         }
 
         function compartilharProduto(link) {
@@ -609,6 +703,12 @@
             });
     
             exibirProdutos(produtosFiltrados);
+        }
+
+        function cancelarFiltro() {
+            document.getElementById('filtro-nome').value = '';
+            document.getElementById('filtro-categoria').value = '';
+            exibirProdutos(produtos);
         }
     </script>
  
