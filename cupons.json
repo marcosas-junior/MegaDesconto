@@ -1,5 +1,21 @@
 [
     {
+        "NumeroCupom": "S8FT3",
+        "Loja": "Exclusivos Lojas Oficiais",
+        "Validade": "Indeterminado",
+        "Condição": "R$10 OFF nas Compras acima de R$ 60,00",
+        "Categoria": "Todas Lojas Shopee",
+        "Link": "https://marcosas-junior.github.io/MegaDesconto/#banner-lojas"
+    },
+    {
+        "NumeroCupom": "M4D31N",
+        "Loja": "Exclusivos Lojas Oficiais",
+        "Validade": "Indeterminado",
+        "Condição": "R$30 OFF nas Compras acima de R$ 250,00",
+        "Categoria": "Todas Lojas Shopee",
+        "Link": "https://marcosas-junior.github.io/MegaDesconto/#banner-lojas"
+    },
+    {
         "NumeroCupom": "6 Cupons de Frete Grátis",
         "Loja": "Produtos com Selo Shopee",
         "Validade": "31/05/2025",
