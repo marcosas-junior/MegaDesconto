@@ -401,6 +401,87 @@
         #mensagem-nao-encontrado ul li a:hover {
             text-decoration: underline;
         }
+        /* Estilos para o formulário de contato */
+        #formulario-contato {
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff6600;
+        }
+
+        #formulario-contato h2 {
+            color: #ff6600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #formulario-contato label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        #formulario-contato input,
+        #formulario-contato textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        #formulario-contato textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        #formulario-contato button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        #formulario-contato button:hover {
+            background-color: #cc5200;
+        }
+
+        #mensagem-sucesso {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            display: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        #mensagem-erro {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            display: none;
+            font-size: 16px;
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -418,6 +499,7 @@
             <li><a href="#cupons">Cupons</a></li>
             <li><a href="#banner-lojas">Lojas</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li><a href="#formulario-contato">Fale Conosco</a></li>
         </ul>
     </nav>
 
@@ -451,13 +533,76 @@
     <h2 class="banner-titulo">Lojas Oficiais</h2>
     <div class="banner-lojas" id="banner-lojas"></div>
 
+    <div id="formulario-contato">
+        <h2>Fale Conosco</h2>
+        <form id="contato-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        <div id="mensagem-sucesso">Mensagem enviada com sucesso!</div>
+        <div id="mensagem-erro">Erro ao enviar mensagem. Tente novamente.</div>
+    </div>
+
+
     <footer id="contato" class="rodape">
         <div class="rodape-conteudo">
             </div>
     </footer>
     
-
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
     <script>
+
+document.getElementById('contato-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const data = new Date().toISOString();
+
+    // Validação para evitar envios vazios
+    if (!nome || !email || !telefone || !mensagem) {
+        document.getElementById('mensagem-erro').textContent = "Todos os campos devem ser preenchidos!";
+        document.getElementById('mensagem-erro').style.display = 'block';
+        return;
+    }
+
+    // Enviar dados ao Firestore
+    db.collection('leads').add({
+        nome,
+        email,
+        telefone,
+        mensagem,
+        data
+    }).then(() => {
+        console.log('Mensagem enviada para o Firestore com sucesso!');
+        document.getElementById('mensagem-sucesso').style.display = 'block';
+        document.getElementById('mensagem-erro').style.display = 'none';
+        
+        // Limpa os campos do formulário
+        document.getElementById('contato-form').reset();
+    }).catch((error) => {
+        console.error('Erro ao enviar mensagem para o Firestore:', error);
+        document.getElementById('mensagem-erro').textContent = "Erro ao enviar mensagem. Tente novamente.";
+        document.getElementById('mensagem-erro').style.display = 'block';
+        document.getElementById('mensagem-sucesso').style.display = 'none';
+    });
+});
+       
+
          
         // Carregar cupons
         fetch('cupons.json')
@@ -710,6 +855,22 @@
             document.getElementById('filtro-categoria').value = '';
             exibirProdutos(produtos);
         }
+         //Adiciona o contador de visitas   
+            document.addEventListener("DOMContentLoaded", () => {
+            let visitas = localStorage.getItem("contadorVisitas") || 0;
+            visitas++;
+            localStorage.setItem("contadorVisitas", visitas);
+
+            // Criar um elemento para o contador no rodapé
+            const contadorElemento = document.createElement("p");
+            contadorElemento.textContent = `Visitas nesta página: ${visitas}`;
+            contadorElemento.style.color = "#ccc";  // Discreto
+            contadorElemento.style.fontSize = "12px";
+            contadorElemento.style.marginTop = "10px";
+
+            // Adicionar ao rodapé
+            document.querySelector(".rodape").appendChild(contadorElemento);
+        });
     </script>
  
 <footer class="rodape">
