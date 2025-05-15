@@ -53,16 +53,25 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 5px;
         }
-
+        
         .menu-navegacao ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
         }
-
+        
+        /* Media query para dispositivos móveis */
+        @media (max-width: 768px) { /* ou outro valor que você considere adequado */
+        .menu-navegacao ul {
+            gap: 10px; /* Espaçamento reduzido para telas menores */
+        }
+        .menu-navegacao ul li a {
+            padding: 10px 12px; /* Reduzindo o padding dos links */
+            }
+        }
         .menu-navegacao ul li {
             display: inline;
         }
@@ -71,7 +80,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 8px 12px;
             transition: background-color 0.3s ease;
         }
 
