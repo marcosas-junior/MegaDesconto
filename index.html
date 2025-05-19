@@ -709,7 +709,7 @@
                     let bannerHtml = '';
                     for (let i = 0; i < Math.min(3, data.length); i++) {
                         // Construir o caminho da imagem
-                        const caminhoImagem = 'assets/banner-ofertas/' + data[i].imagem;
+                        const caminhoImagem = data[i].imagem;
 
                         bannerHtml += `
                             <div class="banner-item">
