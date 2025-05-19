@@ -89,6 +89,62 @@
             border-radius: 5px;
         }
 
+        
+        /* Banner Flutuante */
+        #banner-flutuante {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 9999;
+        display: none;
+        max-width: 90%;
+        }
+
+        .banner-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .banner-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .banner-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .fechar-banner {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .compartilhar-banner {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+
         /* Menu horizontal de categorias */
         .menu-categorias {
             display: flex;
@@ -511,6 +567,9 @@
         </ul>
     </nav>
 
+    <div id="banner-flutuante">
+    </div>
+
     <h2 class="banner-titulo">Menu Categorias</h2>
     <div class="menu-categorias" id="menu-categorias"></div>
 
@@ -627,6 +686,81 @@
             document.getElementById('mensagem-erro').style.display = 'block';
             document.getElementById('mensagem-sucesso').style.display = 'none';
         }
+    });
+</script>
+
+    /<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('banner-flutuante');
+        if (!banner) {
+            console.error('Elemento #banner-flutuante não encontrado!');
+            return;
+        }
+
+        fetch('banner-ofertas.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o JSON: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.length > 0) {
+                    let bannerHtml = '';
+                    for (let i = 0; i < Math.min(3, data.length); i++) {
+                        // Construir o caminho da imagem
+                        const caminhoImagem = 'assets/banner-ofertas/' + data[i].imagem;
+
+                        bannerHtml += `
+                            <div class="banner-item">
+                                <a href="${data[i].link}" target="_blank">
+                                    <img src="${caminhoImagem}" alt="${data[i].anunciado}">
+                                </a>
+                                <a href="${data[i].link}" target="_blank">${data[i].descricao}</a>
+                                <button class="fechar-banner">×</button>
+                                <button class="compartilhar-banner">Compartilhar</button>
+                            </div>
+                        `;
+                    }
+                    banner.innerHTML = bannerHtml;
+                    banner.style.display = 'block';
+
+                    // Adicionar lógica para fechar
+                    const botaoFechar = banner.querySelector('.fechar-banner');
+                    if (botaoFechar) {
+                        botaoFechar.addEventListener('click', () => {
+                            banner.style.display = 'none';
+                        });
+                    } else {
+                        console.error('Botão de fechar não encontrado!');
+                    }
+
+                    // Adicionar lógica para compartilhar
+                    const botoesCompartilhar = banner.querySelectorAll('.compartilhar-banner');
+                    if (botoesCompartilhar.length > 0) {
+                        botoesCompartilhar.forEach((botao, index) => {
+                            botao.addEventListener('click', () => {
+                                const linkParaCompartilhar = data[index].link;
+                                if (navigator.share) {
+                                    navigator.share({
+                                        title: 'Confira essa oferta!',
+                                        url: linkParaCompartilhar
+                                    })
+                                    .then(() => console.log('Compartilhado com sucesso!'))
+                                    .catch((error) => console.error('Erro ao compartilhar:', error));
+                                } else {
+                                    // Fallback para compartilhar no WhatsApp
+                                    const mensagem = encodeURIComponent(`Confira essa oferta: ${linkParaCompartilhar}`);
+                                    window.open(`https://wa.me/?text=${mensagem}`, '_blank');
+                                }
+                            });
+                        });
+                    } else {
+                        console.error('Botões de compartilhar não encontrados!');
+                    }
+                }
+            })
+            .catch(error => console.error('Erro geral:', error));
     });
 </script>
     
