@@ -628,10 +628,11 @@
     </footer>
     
     <script type="module">
-    // Importe as funções específicas que você precisa dos SDKs do Firebase
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"; // Se você realmente precisa do Analytics
+        // Importe as funções específicas que você precisa dos SDKs do Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        // Combinado todos os imports do firestore em uma única linha
+        import { getFirestore, collection, addDoc, doc, getDoc, setDoc, runTransaction } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js"; // Apenas uma vez
 
     // Sua configuração do Firebase
     const firebaseConfig = {
@@ -648,6 +649,59 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
     const analytics = getAnalytics(app); // Inicialize o Analytics se precisar
+
+    // --- CÓDIGO PARA O CONTADOR DE VISITAS COM FIRESTORE ---
+  document.addEventListener('DOMContentLoaded', async function() {
+      // 1. Encontre o elemento onde o contador será exibido
+      let contadorElemento = document.getElementById('contador-visitas');
+      if (!contadorElemento) {
+          contadorElemento = document.createElement('p');
+          contadorElemento.id = 'contador-visitas';
+          contadorElemento.style.color = "#ccc";
+          contadorElemento.style.fontSize = "12px";
+          contadorElemento.style.marginTop = "10px";
+          
+          const rodape = document.querySelector(".rodape");
+          if (rodape) {
+              rodape.appendChild(contadorElemento);
+          } else {
+              console.warn("Elemento '.rodape' não encontrado para adicionar o contador de visitas. Adicionando ao body.");
+              document.body.appendChild(contadorElemento); // Fallback para adicionar no body
+          }
+      }
+
+      // 2. Referência ao documento do contador no Firestore
+      // Vamos criar uma coleção chamada 'siteInfo' e um documento chamado 'visitas'
+      const contadorDocRef = doc(db, 'siteInfo', 'visitas');
+
+      try {
+          // 3. Executa a transação para incrementar o contador
+          const novoContador = await runTransaction(db, async (transaction) => {
+              const sfDoc = await transaction.get(contadorDocRef);
+              if (!sfDoc.exists()) {
+                  // Se o documento do contador não existir, cria e inicia em 1
+                  transaction.set(contadorDocRef, { count: 1 });
+                  return 1;
+              }
+
+              // Se existir, lê o valor atual e incrementa
+              const currentCount = sfDoc.data().count;
+              const newCount = (typeof currentCount === 'number' ? currentCount : 0) + 1;
+              transaction.update(contadorDocRef, { count: newCount });
+              return newCount;
+          });
+
+          // 4. Atualiza o elemento HTML com o novo contador
+          contadorElemento.textContent = `Visitas nesta página: ${novoContador}`;
+          console.log('Contador de visitas atualizado para:', novoContador);
+
+      } catch (e) {
+          console.error("Erro ao incrementar o contador de visitas:", e);
+          contadorElemento.textContent = `Visitas nesta página: Erro ao carregar`; // Mensagem de erro para o usuário
+      }
+    });
+    
+    // Função para aplicar filtros (se existirem outras funções aqui)
 
     document.getElementById('contato-form').addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -689,6 +743,7 @@
     });
 </script>
 
+            // Script para carregar o banner flutuante
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const banner = document.getElementById('banner-flutuante');
