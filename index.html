@@ -743,175 +743,58 @@
     });
 </script>
 
-            // Script para carregar o banner flutuante
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const banner = document.getElementById('banner-flutuante');
-            if (!banner) {
-                console.error('Elemento #banner-flutuante não encontrado!');
-                return;
-            }
-
-            fetch('banner-ofertas.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Erro ao carregar o JSON: ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.length > 0) {
-                        let bannerHtml = '';
-                        for (let i = 0; i < Math.min(3, data.length); i++) {
-                            // Caminho da imagem agora é direto
-                            const caminhoImagem = data[i].imagem;
-
-                            bannerHtml += `
-                                <div class="banner-item">
-                                    <a href="${data[i].link}" target="_blank">
-                                        <img src="${caminhoImagem}" alt="${data[i].anunciado}">
-                                    </a>
-                                    <a href="${data[i].link}" target="_blank">${data[i].descricao}</a>
-                                    <button class="fechar-banner">×</button>
-                                    <button class="compartilhar-banner">Compartilhar</button>
-                                </div>
-                            `;
-                        }
-                        banner.innerHTML = bannerHtml;
-                        banner.style.display = 'block';
-
-                        // Adicionar lógica para fechar
-                        const botaoFechar = banner.querySelector('.fechar-banner');
-                        if (botaoFechar) {
-                            botaoFechar.addEventListener('click', () => {
-                                banner.style.display = 'none';
-                            });
-                        } else {
-                            console.error('Botão de fechar não encontrado!');
-                        }
-
-                        // Adicionar lógica para compartilhar
-                        const botoesCompartilhar = banner.querySelectorAll('.compartilhar-banner');
-                        if (botoesCompartilhar.length > 0) {
-                            botoesCompartilhar.forEach((botao, index) => {
-                                botao.addEventListener('click', () => {
-                                    const linkParaCompartilhar = data[index].link;
-                                    if (navigator.share) {
-                                        navigator.share({
-                                            title: 'Confira essa oferta!',
-                                            url: linkParaCompartilhar
-                                        })
-                                        .then(() => console.log('Compartilhado com sucesso!'))
-                                        .catch((error) => console.error('Erro ao compartilhar:', error));
-                                    } else {
-                                        // Fallback para compartilhar no WhatsApp
-                                        const mensagem = encodeURIComponent(`Confira essa oferta: ${linkParaCompartilhar}`);
-                                        window.open(`https://wa.me/?text=${mensagem}`, '_blank');
-                                    }
-                                });
-                            });
-                        } else {
-                            console.error('Botões de compartilhar não encontrados!');
-                        }
-                    }
-                })
-                .catch(error => console.error('Erro geral:', error));
-        });
-    </script>
-    
-    <script>
-
-               
-        // Carregar cupons
-        fetch('cupons.json')
-            .then(response => response.json())
-            .then(data => {
-                const cupons = document.getElementById('cupons');
-                cupons.innerHTML = '';
-                data.forEach(cupom => {
-                    const cupomDiv = document.createElement('div');
-                    cupomDiv.className = 'cupons-item';
-                    cupomDiv.innerHTML = `
-                        <p><strong>Desconto:</strong> ${cupom.NumeroCupom}</p>
-                        <p>
-                            <strong>Loja:</strong>
-                            <a href="${cupom['Link']}" target="_blank">${cupom.Loja}</a>
-                        </p>
-                        <p><strong>Validade:</strong> ${cupom.Validade}</p>
-                        <p><strong>Condição:</strong> ${cupom.Condição}</p>
-                        <p><strong>Categoria:</strong> ${cupom.Categoria}</p>
-                    `;
-
-                    const compartilharBtn = document.createElement('button');
-                    compartilharBtn.className = 'compartilhar-btn';
-                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
-                    compartilharBtn.addEventListener('click', () => compartilharProduto(cupom['Link']));
-
-                    cupomDiv.appendChild(compartilharBtn);
-                    cupons.appendChild(cupomDiv);
-                });
-            })
-            .catch(error => console.error('Erro ao carregar cupons:', error));
-    
-        // Carregar lojas
-        fetch('lojas.json')
-            .then(response => response.json())
-            .then(data => {
-                const bannerLojas = document.getElementById('banner-lojas');
-                bannerLojas.innerHTML = '';
-                data.forEach(loja => {
-                    const lojaDiv = document.createElement('div');
-                    lojaDiv.className = 'banner-lojas-item';
-                    lojaDiv.innerHTML = `
-                        <a href="${loja.link}" target="_blank">
-                            <img src="${loja.imagem}" alt="${loja.nome}">
-                            <p>${loja.nome}</p>
-                        </a>
-                        <p>Categoria: ${loja.Categoria}</p>
-                    `;
-
-                    const compartilharBtn = document.createElement('button');
-                    compartilharBtn.className = 'compartilhar-btn compartilhar-btn-loja';
-                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
-                    compartilharBtn.addEventListener('click', () => compartilharProduto(loja.link));
-
-                    lojaDiv.appendChild(compartilharBtn);
-                    bannerLojas.appendChild(lojaDiv);
-                });
-            })
-            .catch(error => console.error('Erro ao carregar lojas:', error));
-    
-        // Carregar categorias
-        fetch('catMenu.json')
-            .then(response => response.json())
-            .then(data => {
-                const menuCategorias = document.getElementById('menu-categorias');
-                menuCategorias.innerHTML = '';
-                data.forEach(categoria => {
-                    const categoriaDiv = document.createElement('div');
-                    categoriaDiv.className = 'menu-categorias-item';
-                    categoriaDiv.innerHTML = `
-                        <a href="${categoria.LinkAfiliado}" target="_blank">
-                            <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
-                            <p>${categoria['Categorias Específicas']}</p>
-                        </a>
-                    `;
-
-                    const compartilharBtn = document.createElement('button');
-                    compartilharBtn.className = 'compartilhar-btn';
-                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
-                    compartilharBtn.addEventListener('click', () => compartilharProduto(categoria.LinkAfiliado));
-
-                    categoriaDiv.appendChild(compartilharBtn);
-                    menuCategorias.appendChild(categoriaDiv);
-                });
-            })
-            .catch(error => console.error('Erro ao carregar menu:', error));
-
+            <script>
+        // Variáveis globais para os dados, para que as funções possam acessá-las
         let produtos = [];
         let produtosVisiveis = 20;
         let categoriasData = []; // Variável para armazenar os dados das categorias
 
+        // Funções auxiliares (declaradas fora do DOMContentLoaded para serem globais)
+        function compartilharProduto(link) {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Confira este produto!',
+                    url: link
+                })
+                .then(() => console.log('Compartilhado com sucesso'))
+                .catch(error => {
+                    console.error('Erro ao compartilhar:', error);
+                    if (error.name === 'AbortError') {
+                        console.log('Compartilhamento cancelado pelo usuário.');
+                    } else if (error.name === 'NotAllowedError') {
+                        console.error('Permissão negada para compartilhar.');
+                    } else {
+                         console.error('Erro desconhecido ao compartilhar.');
+                    }
+                    // Fallback para copiar para a área de transferência
+                    document.execCommand('copy'); // Usar execCommand para compatibilidade em iframes
+                    alert('Link copiado para a área de transferência!');
+                });
+            } else {
+                // Fallback para copiar para a área de transferência
+                document.execCommand('copy'); // Usar execCommand para compatibilidade em iframes
+                alert('Link copiado para a área de transferência!');
+            }
+        }
+    
+        function aplicarFiltros() {
+            const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
+            const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
+    
+            const produtosFiltrados = produtos.filter(produto => {
+                const categoriaCorresponde = !filtroCategoria || produto.Categoria.toLowerCase() === filtroCategoria;
+                const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
+                return categoriaCorresponde && nomeCorresponde;
+            });
+    
+            exibirProdutos(produtosFiltrados);
+        }
+
+        function cancelarFiltro() {
+            document.getElementById('filtro-nome').value = '';
+            document.getElementById('filtro-categoria').value = '';
+            exibirProdutos(produtos);
+        }
 
         function carregarMaisProdutos() {
             const container = document.getElementById('produtos');
@@ -921,9 +804,7 @@
                 const produtoDiv = document.createElement('div');
                 produtoDiv.className = 'produto';
                 produtoDiv.innerHTML = `
-                    <a href="${produto['Offer Link']}" target="_blank">
-                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                    </a>
+                    <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
                     <h2>${produto['Item Name']}</h2>
                     <p>Preço: <strong>R$${produto.Price}</strong></p>
                     <p>Loja: ${produto['Shop Name']}</p>
@@ -951,34 +832,6 @@
             }
         }
     
-        // Carregar produtos do JSON
-        fetch('Produtos.json')
-            .then(response => response.json())
-            .then(data => {
-                produtos = data;
-    
-                const categorias = [...new Set(produtos.map(produto => produto.Categoria))];
-                const filtroCategoria = document.getElementById('filtro-categoria');
-                categorias.forEach(categoria => {
-                    const option = document.createElement('option');
-                    option.value = categoria;
-                    option.textContent = categoria;
-                    filtroCategoria.appendChild(option);
-                });
-    
-                carregarMaisProdutos();
-                window.addEventListener('scroll', verifiqueScroll);
-            })
-            .catch(error => console.error('Erro ao carregar produtos:', error));
-        
-        // Carrega as categorias do arquivo catMenu.json
-        fetch('catMenu.json')
-            .then(response => response.json())
-            .then(data => {
-                categoriasData = data; // Armazena os dados das categorias
-            })
-            .catch(error => console.error('Erro ao carregar categorias:', error));
-
         function exibirProdutos(lista) {
             const container = document.getElementById('produtos');
             container.innerHTML = '';
@@ -1007,88 +860,191 @@
                     const produtoDiv = document.createElement('div');
                     produtoDiv.className = 'produto';
                     produtoDiv.innerHTML = `
-                        <a href="${produto['Offer Link']}" target="_blank">
-                            <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
-                    </a>
-                    <h2>${produto['Item Name']}</h2>
-                    <p>Preço: <strong>R$${produto.Price}</strong></p>
-                    <p>Loja: ${produto['Shop Name']}</p>
-                    <p>Categoria: ${produto.Categoria}</p>
-                    <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
-                `;
+                        <img src="${produto['Link Imagem'] || 'https://via.placeholder.com/300'}" alt="${produto['Item Name']}">
+                        <h2>${produto['Item Name']}</h2>
+                        <p>Preço: <strong>R$${produto.Price}</strong></p>
+                        <p>Loja: ${produto['Shop Name']}</p>
+                        <p>Categoria: ${produto.Categoria}</p>
+                        <a href="${produto['Offer Link']}" target="_blank">Ver produto</a>
+                    `;
 
-                const compartilharBtn = document.createElement('button');
-                compartilharBtn.className = 'compartilhar-btn';
-                compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
-                compartilharBtn.addEventListener('click', () => compartilharProduto(produto['Offer Link']));
+                    const compartilharBtn = document.createElement('button');
+                    compartilharBtn.className = 'compartilhar-btn';
+                    compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                    compartilharBtn.addEventListener('click', () => compartilharProduto(produto['Offer Link']));
 
-                produtoDiv.appendChild(compartilharBtn);
-                container.appendChild(produtoDiv);
+                    produtoDiv.appendChild(compartilharBtn);
+                    container.appendChild(produtoDiv);
                 });
             }
         }
 
-        function compartilharProduto(link) {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Confira este produto!',
-                    url: link
+        // --- NOVO DOMContentLoaded CONSOLIDADO ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carregar o banner flutuante
+            const banner = document.getElementById('banner-flutuante');
+            if (banner) { // Verifica se o banner existe antes de tentar carregar
+                fetch('banner-ofertas.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Erro ao carregar o JSON do banner: ' + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.length > 0) {
+                            let bannerHtml = '';
+                            for (let i = 0; i < Math.min(3, data.length); i++) {
+                                const caminhoImagem = data[i].imagem;
+                                bannerHtml += `
+                                    <div class="banner-item">
+                                        <a href="${data[i].link}" target="_blank">
+                                            <img src="${caminhoImagem}" alt="${data[i].anunciado}">
+                                        </a>
+                                        <a href="${data[i].link}" target="_blank">${data[i].descricao}</a>
+                                        <button class="fechar-banner">×</button>
+                                        <button class="compartilhar-banner">Compartilhar</button>
+                                    </div>
+                                `;
+                            }
+                            banner.innerHTML = bannerHtml;
+                            banner.style.display = 'block';
+
+                            const botaoFechar = banner.querySelector('.fechar-banner');
+                            if (botaoFechar) {
+                                botaoFechar.addEventListener('click', () => {
+                                    banner.style.display = 'none';
+                                });
+                            } else {
+                                console.error('Botão de fechar do banner não encontrado!');
+                            }
+
+                            const botoesCompartilhar = banner.querySelectorAll('.compartilhar-banner');
+                            if (botoesCompartilhar.length > 0) {
+                                botoesCompartilhar.forEach((botao, index) => {
+                                    botao.addEventListener('click', () => {
+                                        const linkParaCompartilhar = data[index].link;
+                                        compartilharProduto(linkParaCompartilhar); // Reutiliza a função global
+                                    });
+                                });
+                            } else {
+                                console.error('Botões de compartilhar do banner não encontrados!');
+                            }
+                        }
+                    })
+                    .catch(error => console.error('Erro ao carregar ofertas do banner:', error));
+            }
+
+
+            // Carregar cupons
+            fetch('cupons.json')
+                .then(response => response.json())
+                .then(data => {
+                    const cupons = document.getElementById('cupons');
+                    cupons.innerHTML = '';
+                    data.forEach(cupom => {
+                        const cupomDiv = document.createElement('div');
+                        cupomDiv.className = 'cupons-item';
+                        cupomDiv.innerHTML = `
+                            <p><strong>Desconto:</strong> ${cupom.NumeroCupom}</p>
+                            <p>
+                                <strong>Loja:</strong>
+                                <a href="${cupom['Link']}" target="_blank">${cupom.Loja}</a>
+                            </p>
+                            <p><strong>Validade:</strong> ${cupom.Validade}</p>
+                            <p><strong>Condição:</strong> ${cupom.Condição}</p>
+                            <p><strong>Categoria:</strong> ${cupom.Categoria}</p>
+                        `;
+                        const compartilharBtn = document.createElement('button');
+                        compartilharBtn.className = 'compartilhar-btn';
+                        compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                        compartilharBtn.addEventListener('click', () => compartilharProduto(cupom['Link']));
+                        cupomDiv.appendChild(compartilharBtn);
+                        cupons.appendChild(cupomDiv);
+                    });
                 })
-                .then(() => console.log('Compartilhado com sucesso'))
-                .catch(error => {
-                    console.error('Erro ao compartilhar:', error);
-                    if (error.name === 'AbortError') {
-                        console.log('Compartilhamento cancelado pelo usuário.');
-                    } else if (error.name === 'NotAllowedError') {
-                        console.error('Permissão negada para compartilhar.');
-                    } else {
-                         console.error('Erro desconhecido ao compartilhar.');
-                    }
-                    navigator.clipboard.writeText(link)
-                    .then(() => alert('Link copiado para a área de transferência!'))
-                    .catch(error => console.error('Erro ao copiar link:', error));
-                });
-            } else {
-                navigator.clipboard.writeText(link)
-                .then(() => alert('Link copiado para a área de transferência!'))
-                .catch(error => console.error('Erro ao copiar link:', error));
+                .catch(error => console.error('Erro ao carregar cupons:', error));
+        
+            // Carregar lojas
+            fetch('lojas.json')
+                .then(response => response.json())
+                .then(data => {
+                    const bannerLojas = document.getElementById('banner-lojas');
+                    bannerLojas.innerHTML = '';
+                    data.forEach(loja => {
+                        const lojaDiv = document.createElement('div');
+                        lojaDiv.className = 'banner-lojas-item';
+                        lojaDiv.innerHTML = `
+                            <img src="${loja.imagem}" alt="${loja.nome}">
+                            <a href="${loja.link}" target="_blank">${loja.nome}</a>
+                            <p>Categoria: ${loja.Categoria}</p>
+                        `;
+                        const compartilharBtn = document.createElement('button');
+                        compartilharBtn.className = 'compartilhar-btn compartilhar-btn-loja';
+                        compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                        compartilharBtn.addEventListener('click', () => compartilharProduto(loja.link));
+                        lojaDiv.appendChild(compartilharBtn);
+                        bannerLojas.appendChild(lojaDiv);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar lojas:', error));
+        
+            // Carregar categorias
+            fetch('catMenu.json')
+                .then(response => response.json())
+                .then(data => {
+                    categoriasData = data; // Armazena os dados das categorias para uso posterior (ex: mensagem de não encontrado)
+                    const menuCategorias = document.getElementById('menu-categorias');
+                    menuCategorias.innerHTML = '';
+                    data.forEach(categoria => {
+                        const categoriaDiv = document.createElement('div');
+                        categoriaDiv.className = 'menu-categorias-item';
+                        categoriaDiv.innerHTML = `
+                            <img src="${categoria['Link Imagem']}" alt="${categoria['Categorias Específicas']}">
+                            <a href="${categoria.LinkAfiliado}" target="_blank">${categoria['Categorias Específicas']}</a>
+                        `;
+                        const compartilharBtn = document.createElement('button');
+                        compartilharBtn.className = 'compartilhar-btn';
+                        compartilharBtn.innerHTML = '<img src="icone-share.webp" alt="Compartilhar">';
+                        compartilharBtn.addEventListener('click', () => compartilharProduto(categoria.LinkAfiliado));
+                        categoriaDiv.appendChild(compartilharBtn);
+                        menuCategorias.appendChild(categoriaDiv);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar menu de categorias:', error));
+
+            // Carregar produtos do JSON
+            fetch('Produtos.json')
+                .then(response => response.json())
+                .then(data => {
+                    produtos = data;
+                    const filtroCategoria = document.getElementById('filtro-categoria');
+                    // Preencher opções de categorias no filtro
+                    const categoriasUnicas = [...new Set(produtos.map(produto => produto.Categoria))];
+                    categoriasUnicas.forEach(categoria => {
+                        const option = document.createElement('option');
+                        option.value = categoria;
+                        option.textContent = categoria;
+                        filtroCategoria.appendChild(option);
+                    });
+                    carregarMaisProdutos(); // Carrega os primeiros produtos
+                    window.addEventListener('scroll', verifiqueScroll); // Adiciona listener de scroll
+                })
+                .catch(error => console.error('Erro ao carregar produtos:', error));
+
+            // Listener para o botão de cancelar filtro
+            const cancelarFiltroBtn = document.getElementById('cancelar-filtro');
+            if (cancelarFiltroBtn) {
+                cancelarFiltroBtn.addEventListener('click', cancelarFiltro);
             }
-        }
-    
-        function aplicarFiltros() {
-            const filtroCategoria = document.getElementById('filtro-categoria').value.toLowerCase();
-            const filtroNome = document.getElementById('filtro-nome').value.toLowerCase();
-    
-            const produtosFiltrados = produtos.filter(produto => {
-                const categoriaCorresponde = !filtroCategoria || produto.Categoria.toLowerCase() === filtroCategoria;
-                const nomeCorresponde = produto['Item Name'].toLowerCase().includes(filtroNome);
-                return categoriaCorresponde && nomeCorresponde;
-            });
-    
-            exibirProdutos(produtosFiltrados);
-        }
 
-        function cancelarFiltro() {
-            document.getElementById('filtro-nome').value = '';
-            document.getElementById('filtro-categoria').value = '';
-            exibirProdutos(produtos);
-        }
-         //Adiciona o contador de visitas   
-            document.addEventListener("DOMContentLoaded", () => {
-            let visitas = localStorage.getItem("contadorVisitas") || 0;
-            visitas++;
-            localStorage.setItem("contadorVisitas", visitas);
+            // Listener para o botão de aplicar filtro
+            const aplicarFiltroBtn = document.querySelector('.filtros button'); // Seleciona o primeiro botão dentro de .filtros
+            if (aplicarFiltroBtn) {
+                aplicarFiltroBtn.addEventListener('click', aplicarFiltros);
+            }
+        }); // Fim do DOMContentLoaded consolidado
 
-            // Criar um elemento para o contador no rodapé
-            const contadorElemento = document.createElement("p");
-            contadorElemento.textContent = `Visitas nesta página: ${visitas}`;
-            contadorElemento.style.color = "#ccc";  // Discreto
-            contadorElemento.style.fontSize = "12px";
-            contadorElemento.style.marginTop = "10px";
-
-            // Adicionar ao rodapé
-            document.querySelector(".rodape").appendChild(contadorElemento);
-        });
     </script>
  
 <footer class="rodape">
