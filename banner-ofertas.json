@@ -7,20 +7,15 @@
   },
   {
     "imagem": "Link2.png",
-    "link": "https://s.shopee.com.br/3frG9Rakca",
-    "anunciado": "Calçados Modare",
-    "descricao": "Modare Original"
+    "link": "https://marcosas-junior.github.io/MegaDesconto/#menu-categorias",
+    "anunciado": "Cupom do Dia",
+    "descricao": "Cupom do Dia"
   },
   {
     "imagem": "Link3.jpg",
     "link": "https://marcosas-junior.github.io/MegaDesconto/#menu-categorias",
     "anunciado": "Ofertas Categorias",
     "descricao": "Até 30% off"
-  },
-  {
-    "imagem": "Link4.png",
-    "link": "hhttps://marcosas-junior.github.io/MegaDesconto/#menu-categorias",
-    "anunciado": "Cupom do Dia",
-    "descricao": "Cupom do Dia"
   }
+
 ]
