@@ -16,54 +16,6 @@
         "Link": "https://marcosas-junior.github.io/MegaDesconto/#banner-lojas"
     },
     {
-        "NumeroCupom": "6 Cupons de Frete Grátis",
-        "Loja": "Produtos com Selo Shopee",
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$ 19,00",
-        "Categoria": "Todas",
-        "Link": "https://s.shopee.com.br/4AmhBIqXNN"
-    },
-    {
-        "NumeroCupom": "Cupom de Frete Grátis",
-        "Loja": "Lojas Oficiais",
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$ 10,00",
-        "Categoria": "Lojas Oficiais",
-        "Link": "https://s.shopee.com.br/1Vm8VxFEQa"
-    },
-    {
-        "NumeroCupom": "25% OFF",
-        "Loja": "Lojas Oficiais Calçados",
-        "Validade": "31/05/2025",
-        "Condição": "Limitado a R$ 10,00",
-        "Categoria": "Lojas Oficiais",
-        "Link": "https://s.shopee.com.br/AUgki4JNCO"
-    },
-    {
-        "NumeroCupom": "R$35 de Desconto",
-        "Loja": "Lojas Oficiais",
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$ 259,00",
-        "Categoria": "Lojas Oficiais",
-        "Link": "https://s.shopee.com.br/9zkfOZSZey"
-    },
-    {
-        "NumeroCupom": "R$25 de Desconto",
-        "Loja": "Lojas de Moda",
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$179,00",
-        "Categoria": "Moda",
-        "Link": "https://s.shopee.com.br/6pnSKgN9zn"
-    },
-    {
-        "NumeroCupom": "R$30 de Desconto",
-        "Loja": "Lojas de Moda",
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$279,00",
-        "Categoria": "Moda",
-        "Link": "https://s.shopee.com.br/8zrwvGLxrM"
-    },
-    {
         "NumeroCupom": "1% OFF",
         "Loja": "Jeans Shop",
         "Validade": "01/07/2025",
@@ -134,13 +86,5 @@
         "Condição": "Nas Compras acima de R$ 89,99",
         "Categoria": "Moda",
         "Link": "https://s.shopee.com.br/8zs8Ay65J2"
-    },
-    {
-        "NumeroCupom": "R$15 OFF",
-        "Loja": "Mimorada",	
-        "Validade": "31/05/2025",
-        "Condição": "Nas Compras acima de R$100,00",
-        "Categoria": "Utensílios de Casa",
-        "Link": "https://s.shopee.com.br/2LLNbXBxFU"
     }
 ]

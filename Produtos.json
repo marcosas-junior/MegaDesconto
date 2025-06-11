@@ -156,6 +156,19 @@
         "Categoria": "Achadinhos"
     },
     {
+        "Item Id": 21626608303,
+        "Item Name": "Mochila Bolsa Maternidade Térmica Impermeável Vira Berço",
+        "Price": 89.59,
+        "Sales": "11,4mil",
+        "Shop Name": "Janny_pu",
+        "Commission Rate": 0.03,
+        "Commission": 2.69,
+        "Product Link": "https://shopee.com.br/product/396969093/21626608303",
+        "Offer Link": "https://s.shopee.com.br/1g6lmpQ0sj",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-li1vxk3c8hel05.webp",
+        "Categoria": "Achadinhos"
+    },
+    {
         "Item Id": 23693921720,
         "Item Name": "Pantufa Chinelo Casa Inverno Antiderrapante Sola Emborrachada Reforçada Forrada Quente Macio Unissex",
         "Price": 39.99,
@@ -197,7 +210,7 @@
     {
         "Item Id": 22597499359,
         "Item Name": "Placa decoração studio salão consultório achadinhos",
-        "Price": 35.0,
+        "Price": 35,
         "Sales": 44,
         "Shop Name": "Cortex Dracena",
         "Commission Rate": 0.03,
@@ -218,6 +231,19 @@
         "Product Link": "https://shopee.com.br/product/308269794/18162089291",
         "Offer Link": "https://s.shopee.com.br/7fNGP6z4g5",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-22110-gpsdoct4ktjv78.webp",
+        "Categoria": "Achadinhos"
+    },
+    {
+        "Item Id": 5861986548,
+        "Item Name": "Porta Toalhas Duplo Toalheiro Para Box Preto Fosco 60cm",
+        "Price": 89.9,
+        "Sales": 214,
+        "Shop Name": "CasaMetais",
+        "Commission Rate": 0.08,
+        "Commission": 7.19,
+        "Product Link": "https://shopee.com.br/product/332632799/5861986548",
+        "Offer Link": "https://s.shopee.com.br/2VfsmMMqBw",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7rd5c-lw78xs8xifln9e.webp",
         "Categoria": "Achadinhos"
     },
     {
@@ -405,7 +431,7 @@
     {
         "Item Id": 18996890353,
         "Item Name": "Central Multimídia Universal 2 Din Mp5 Espelhamento Android Ios Bluetooth Som Automotivo",
-        "Price": 203.99,
+        "Price": null,
         "Sales": "4,3mil",
         "Shop Name": "Koala Parts",
         "Commission Rate": 0.11,
@@ -613,7 +639,7 @@
     {
         "Item Id": 19098752815,
         "Item Name": "Suporte Veicular Carro Para Celular 360 ° Giratório Universal Multifuncional Ventilacao Ar",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "60,1mil",
         "Shop Name": "ALL_ACESSORIOS",
         "Commission Rate": 0.08,
@@ -691,7 +717,7 @@
     {
         "Item Id": 23192339611,
         "Item Name": "Alicate Profissional 772 Premium MEY",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "84,3mil",
         "Shop Name": "Stephany Top",
         "Commission Rate": 0.11,
@@ -912,7 +938,7 @@
     {
         "Item Id": 21799078835,
         "Item Name": "Fakhar Lattafa Pride EDP Masculino 100ml",
-        "Price": 189.0,
+        "Price": 189,
         "Sales": "1,5mil",
         "Shop Name": "Dubai World Loja Oficial By Klassey",
         "Commission Rate": 0.07,
@@ -1016,7 +1042,7 @@
     {
         "Item Id": 23993602271,
         "Item Name": "KIT  BABABLU  6 ITENS CHARMELLE  ou BELL CORPUS CABELO CORPO E BANHO",
-        "Price": 55.0,
+        "Price": 55,
         "Sales": 516,
         "Shop Name": "Angel Cosmétics",
         "Commission Rate": 0.09,
@@ -1081,7 +1107,7 @@
     {
         "Item Id": 22297497627,
         "Item Name": "KIT 6 OU 7 ITENS BABABELL TUTTI FRUTTI BELL CORPUS KIT CAPILAR HIDRATAÇÃO MACIEZ",
-        "Price": 54.0,
+        "Price": 54,
         "Sales": "3,2mil",
         "Shop Name": "Angel Cosmétics",
         "Commission Rate": 0.09,
@@ -1172,7 +1198,7 @@
     {
         "Item Id": 20199357121,
         "Item Name": "KIT COMPLETO MASCARA + SHAMPOO + CONDICIONADOR  KARSEELL ORIGINAL MACA POWER COLLAGEN ORIGINAL IMPORTADO Karseell",
-        "Price": 51.0,
+        "Price": 51,
         "Sales": "5,7mil",
         "Shop Name": "KARSEELL DISTRIBUIDOR OFICIAL",
         "Commission Rate": 0.13,
@@ -1211,7 +1237,7 @@
     {
         "Item Id": 22593182290,
         "Item Name": "Kit de Pincel 13 + 2 Esponjas + 1 Kit esponja de Pó aleatório",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "19mil",
         "Shop Name": "yaya.br",
         "Commission Rate": 0.07,
@@ -1224,7 +1250,7 @@
     {
         "Item Id": 20599297698,
         "Item Name": "Kit Frutal Sabonete Líquido + Hidratante para Corpo e Rosto - Beleza e Cuidado Completo",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "4,6mil",
         "Shop Name": "DISTRIBUIDORA G.S LTDA",
         "Commission Rate": 0.07,
@@ -1328,7 +1354,7 @@
     {
         "Item Id": 22397325535,
         "Item Name": "Kit Para Manicure Com Mesa + Prateleira de Esmaltes + Carrinho Auxiliar com 3 Bandejas e Rodinhas MDF",
-        "Price": 199.0,
+        "Price": 199,
         "Sales": "4,3mil",
         "Shop Name": "Decoração.ecomm",
         "Commission Rate": 0.23,
@@ -1419,7 +1445,7 @@
     {
         "Item Id": 18297619389,
         "Item Name": "Lixador de Pé Elétrico - Esfoliador Tira Calos Pedicure Portátil Marisa Lixa Elimina Calo Portátil Usb Pilha",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "243,5mil",
         "Shop Name": "Lily Space",
         "Commission Rate": 0.03,
@@ -1445,7 +1471,7 @@
     {
         "Item Id": 23297443289,
         "Item Name": "Motorzinho Para Lixar Calos e Rachaduras Ideal Para Pedicures",
-        "Price": 39.0,
+        "Price": 39,
         "Sales": "12,2mil",
         "Shop Name": "XUXU BELEZA Oficial",
         "Commission Rate": 0.07,
@@ -1664,6 +1690,19 @@
         "Categoria": "Beleza e Cuidados Pessoais"
     },
     {
+        "Item Id": 19397736691,
+        "Item Name": "Secador De Cabelo 5 em 1 Pente Alisador E Frisador",
+        "Price": 74.99,
+        "Sales": "11,9mil",
+        "Shop Name": "HappyShop_",
+        "Commission Rate": 0.11,
+        "Commission": 8.25,
+        "Product Link": "https://shopee.com.br/product/1312114484/19397736691",
+        "Offer Link": "https://s.shopee.com.br/3qBGMoHlUa",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyd2s9js2ckl1c.webp",
+        "Categoria": "Beleza e Cuidados Pessoais"
+    },
+    {
         "Item Id": 14953069390,
         "Item Name": "Secador de Cabelos Mondial Black Rose 2000W SC-37 220V Preto e Rosa",
         "Price": 169.9,
@@ -1757,7 +1796,7 @@
     {
         "Item Id": 27653749092,
         "Item Name": "10 Set Kids Pintura Brinquedos De Infantil Fundo De Cor Brinquedo De Grafite Aquarela",
-        "Price": 12.0,
+        "Price": 12,
         "Sales": "9,4mil",
         "Shop Name": "Choice Oficial",
         "Commission Rate": 0.07,
@@ -1874,7 +1913,7 @@
     {
         "Item Id": 28322992709,
         "Item Name": "Blocos de montar infantil Brinquedo educativo Mini brinquedos Brinquedo",
-        "Price": 5.0,
+        "Price": 5,
         "Sales": "5,1mil",
         "Shop Name": "Fun Lab",
         "Commission Rate": 0.09,
@@ -2238,7 +2277,7 @@
     {
         "Item Id": 19499243587,
         "Item Name": "KIT1-KIT4 Jogo de Empurrão Rápido POP IT, Anti Stress de Ansiedade Brinquedo, Adequado para Crianças e Adolescentes",
-        "Price": 5.0,
+        "Price": 5,
         "Sales": "35,5mil",
         "Shop Name": "MANASLO ",
         "Commission Rate": 0.03,
@@ -2355,7 +2394,7 @@
     {
         "Item Id": 21399300756,
         "Item Name": "Pelúcia Lilo E Stitch Disney 20cm - Pronta Entrega - Super Promoção",
-        "Price": 31.0,
+        "Price": 31,
         "Sales": "8,2mil",
         "Shop Name": "123Brincando",
         "Commission Rate": 0.03,
@@ -2524,7 +2563,7 @@
     {
         "Item Id": 22891740646,
         "Item Name": "Sandália Feminina Com Elástico Modare Ultraconforto 7183.102",
-        "Price": 85.0,
+        "Price": 85,
         "Sales": 199,
         "Shop Name": "A. C da Cruz Ltda",
         "Commission Rate": 0.03,
@@ -2589,7 +2628,7 @@
     {
         "Item Id": 19098658749,
         "Item Name": "Sandália Feminina Modare Salto Baixo Grosso Conforto 7109465",
-        "Price": 135.0,
+        "Price": 135,
         "Sales": 56,
         "Shop Name": "Sarah Calçados",
         "Commission Rate": 0.07,
@@ -2912,6 +2951,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 12460344617,
+        "Item Name": "20 Pano de prato estampado com bainha - Pano de copa - guardanapo - 100% algodão pano de cozinha",
+        "Price": 43.97,
+        "Sales": "26,4mil",
+        "Shop Name": "Louvre Moda Casa - Pano de prato",
+        "Commission Rate": 0.23,
+        "Commission": 10.11,
+        "Product Link": "https://shopee.com.br/product/407092668/12460344617",
+        "Offer Link": "https://s.shopee.com.br/gEEazToul",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m8ma4zzgk64107.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 23292998985,
         "Item Name": "2-3 Litros Picador Triturador De Alimentos Carne Mixer Elétrica Processador Cozinha Envio Imediato",
         "Price": 73.99,
@@ -2951,6 +3003,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 19178601319,
+        "Item Name": "3L Picador De Alimentos Moedor De Carne Mixer Elétrica Processador Cozinha Casa Alho 110v NO BRASIL",
+        "Price": 89.99,
+        "Sales": "28,8mil",
+        "Shop Name": "RIven Bazar",
+        "Commission Rate": 0.03,
+        "Commission": 2.7,
+        "Product Link": "https://shopee.com.br/product/299222557/19178601319",
+        "Offer Link": "https://s.shopee.com.br/AA5JuRtedC",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lm84ic2oof1z07.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 20475540480,
         "Item Name": "6 Peças/Conjunto  A Melhor Forma Silicone P/ Fritadeira Air Fryer forno Micro-ondas C Alça cesto 80g Grossa + Resistente",
         "Price": 19.99,
@@ -2966,7 +3031,7 @@
     {
         "Item Id": 3013317015,
         "Item Name": "Adega de Parede para Vinhos Porta Taça e Rolhas 100% MDF",
-        "Price": 129.0,
+        "Price": 129,
         "Sales": 503,
         "Shop Name": "CJA Decorações",
         "Commission Rate": 0.08,
@@ -3000,6 +3065,19 @@
         "Product Link": "https://shopee.com.br/product/979724994/18397633430",
         "Offer Link": "https://s.shopee.com.br/2B1b2aRoUo",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lrx79d6zfl7180.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 22796935839,
+        "Item Name": "Aspirador de Pó Vertical 2 em 1 Mondial Turbo Cycle  Preto e Laranja 1100W AP-35",
+        "Price": 159.9,
+        "Sales": "9,4mil",
+        "Shop Name": "Mercado Fácil",
+        "Commission Rate": 0.07,
+        "Commission": 11.19,
+        "Product Link": "https://shopee.com.br/product/1062544851/22796935839",
+        "Offer Link": "https://s.shopee.com.br/8pZwJzyjL4",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7raud-malwsn0x6rcjb6.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -3068,6 +3146,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 22493671115,
+        "Item Name": "Cabeceira MDF Ripado Cama Box King 45x11cm - 20 Placas",
+        "Price": 52.9,
+        "Sales": "1,3mil",
+        "Shop Name": "DECORATION PREMIUM BRASIL",
+        "Commission Rate": 0.07,
+        "Commission": 3.7,
+        "Product Link": "https://shopee.com.br/product/699789371/22493671115",
+        "Offer Link": "https://s.shopee.com.br/2B32NkO6ru",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7rbmi-m5k9x797sayode.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 22392063335,
         "Item Name": "Cadeira Cadeirinha De Alimentaçã Refeição Para Bebê Assento Com Som - Portátil",
         "Price": 89.9,
@@ -3091,6 +3182,19 @@
         "Product Link": "https://shopee.com.br/product/361991364/16592405116",
         "Offer Link": "https://s.shopee.com.br/5VIlrBUohX",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-23020-lw1269yg42mv72.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 15259452047,
+        "Item Name": "Cafeteira elétrica 2 xícaras vermelha Smart Coffee - C-42-2X-RI - Mondial",
+        "Price": 145.9,
+        "Sales": "4,7mil",
+        "Shop Name": "Dutra Máquinas",
+        "Commission Rate": 0.1,
+        "Commission": 14.59,
+        "Product Link": "https://shopee.com.br/product/489001115/15259452047",
+        "Offer Link": "https://s.shopee.com.br/3qBGMoHlTZ",
+        "Link Imagem": "https://down-br.img.susercontent.com/file/sg-11134201-7raum-maoz5ygccevk8d@resize_w450_nl.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -3315,6 +3419,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 19699302974,
+        "Item Name": "Chaleira Elétrica Vidro Temperado 1000W Desligamento Automatico 2 Litros",
+        "Price": 104.9,
+        "Sales": "1,4mil",
+        "Shop Name": "HOME IMPORTS MALIBU",
+        "Commission Rate": 0.13,
+        "Commission": 13.64,
+        "Product Link": "https://shopee.com.br/product/489158876/19699302974",
+        "Offer Link": "https://s.shopee.com.br/10r4zbSYEn",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lxb7ujyfzagvdb.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 14249885930,
         "Item Name": "Coberdrom Casal Queen Sherpa Edredrom Pele de Carneiro 2,40m x 2,20m",
         "Price": 112.9,
@@ -3338,19 +3455,6 @@
         "Product Link": "https://shopee.com.br/product/1226821165/22693054696",
         "Offer Link": "https://s.shopee.com.br/2VfK7CLXij",
         "Link Imagem": "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-m94v2on9yl8if2.webp",
-        "Categoria": "Casa e Cozinha"
-    },
-    {
-        "Item Id": 22792941839,
-        "Item Name": "Coberta Manta Microfibra Para Casal Cores - Cobertas Quentinhas Ótimo Preço Barato",
-        "Price": 27.9,
-        "Sales": "28,4mil",
-        "Shop Name": "ReiDoTapete",
-        "Commission Rate": 0.08,
-        "Commission": 2.23,
-        "Product Link": "https://shopee.com.br/product/358565713/22792941839",
-        "Offer Link": "https://s.shopee.com.br/x6WfQanC",
-        "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-7rccc-ltp5w5566n0506.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -3614,6 +3718,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 22591675230,
+        "Item Name": "Espelho Oval Corpo Inteiro Com Moldura Couro decoração quarto 76x43",
+        "Price": 97,
+        "Sales": "5,9mil",
+        "Shop Name": "AJ Acessorios $",
+        "Commission Rate": 0.12,
+        "Commission": 11.64,
+        "Product Link": "https://shopee.com.br/product/1023714033/22591675230",
+        "Offer Link": "https://s.shopee.com.br/BHy04Viva",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lirnh5jkgfb368.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 18797691824,
         "Item Name": "Espelho Redondo 40Cm X 40Cm Lapidado Led COM FONTE Ambiente Moderno Decoração Espelho Quarto",
         "Price": 99.9,
@@ -3718,6 +3835,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 23892742244,
+        "Item Name": "Fritadeira Elétrica Sem Óleo Air Fryer 5.5L Gaabor Jumbo Family 1400w 127V/220V Vintage",
+        "Price": 229,
+        "Sales": "32,8mil",
+        "Shop Name": "Gaabor oficial",
+        "Commission Rate": 0.03,
+        "Commission": 6.87,
+        "Product Link": "https://shopee.com.br/product/968827688/23892742244",
+        "Offer Link": "https://s.shopee.com.br/6AZB968skI",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m72ohkwqotaf94.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 23997477312,
         "Item Name": "Fruteira de Mesa Média Premium Cesta Frutas Mesa 33cm Altura Aramado 2 Andares Organizador Multiuso",
         "Price": 48.9,
@@ -3746,7 +3876,7 @@
     {
         "Item Id": 18699554932,
         "Item Name": "Garrafa Juicer Liquidificador Elétrico Portátil Recarregável COPO 350ml Mixer Shake Misturador",
-        "Price": 24.0,
+        "Price": 24,
         "Sales": "4,1mil",
         "Shop Name": "BG SHOPPING LTDA",
         "Commission Rate": 0.03,
@@ -3939,6 +4069,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 22997719661,
+        "Item Name": "Jogo de Panelas Kit 4 Pçs Antiaderente Cerâmica Tampa Vidro Teflon Frigideira Não Usa Óleo Não Gruda",
+        "Price": 279.89,
+        "Sales": "1,1mil",
+        "Shop Name": "Vedelar Utilidades",
+        "Commission Rate": 0.07,
+        "Commission": 19.59,
+        "Product Link": "https://shopee.com.br/product/340076400/22997719661",
+        "Offer Link": "https://s.shopee.com.br/7V4YjY3o2Q",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lyv8tykqept14d.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 20997919456,
         "Item Name": "Jogo de Panelas Teflon Munique 11 Pçs com Panela de Pressão fechamento externo de 2.5L",
         "Price": 289.9,
@@ -4030,6 +4173,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 23898063241,
+        "Item Name": "Kit 04 Vasos para Planta Flor Casa Jardim Varanda Coluna Redonda N1 N2 Bojo N1 + Bacia N1 com prato",
+        "Price": 110.9,
+        "Sales": "2,5mil",
+        "Shop Name": "MV Decor",
+        "Commission Rate": 0.03,
+        "Commission": 3.33,
+        "Product Link": "https://shopee.com.br/product/1273474482/23898063241",
+        "Offer Link": "https://s.shopee.com.br/3LEzltJfUU",
+        "Link Imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m4tka9me1hfp24@resize_w450_nl.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 4272152411,
         "Item Name": "Kit 10 Colmeia Organizadora de gavetas Premium (P) - Organizalux",
         "Price": 64.99,
@@ -4079,19 +4235,6 @@
         "Product Link": "https://shopee.com.br/product/352620278/22893731196",
         "Offer Link": "https://s.shopee.com.br/4AnCwC94lm",
         "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lv4y77g6ksrh4e.webp",
-        "Categoria": "Casa e Cozinha"
-    },
-    {
-        "Item Id": 23093250006,
-        "Item Name": "Kit 10 Potes de Vidro 370ml Hermético Marmita Fit com Tampa 4 Travas",
-        "Price": 38.9,
-        "Sales": "13mil",
-        "Shop Name": "Dona Cor",
-        "Commission Rate": 0.09,
-        "Commission": 4.04,
-        "Product Link": "https://shopee.com.br/product/1227023039/23093250006",
-        "Offer Link": "https://s.shopee.com.br/7zzNzJ5bel",
-        "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m1wwau4xaadk0a.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -4264,6 +4407,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 27471259298,
+        "Item Name": "Kit 4 Capas de Almofada Suede Drapeada 45x45cm Decorativas",
+        "Price": 51.9,
+        "Sales": "5,1mil",
+        "Shop Name": "Vitoria Home",
+        "Commission Rate": 0.16,
+        "Commission": 8.3,
+        "Product Link": "https://shopee.com.br/product/640877443/27471259298",
+        "Offer Link": "https://s.shopee.com.br/4L7WxjFrTV",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m8lxwz2fmnipd7.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 23493083893,
         "Item Name": "Kit 4 Capas de Almofadas Decorativas 45x45 - Floral Verde e Bege",
         "Price": 37.74,
@@ -4279,7 +4435,7 @@
     {
         "Item Id": 21397514847,
         "Item Name": "Kit 4 Organizador de Geladeira 3,8 Litros Cesto Com Tampa Multiuso Alimentos Verduras e Vegetais",
-        "Price": 55.9,
+        "Price": null,
         "Sales": "17mil",
         "Shop Name": "UTILIDADES DOMÉSTICA.",
         "Commission Rate": 0.075,
@@ -4305,7 +4461,7 @@
     {
         "Item Id": 19996969407,
         "Item Name": "Kit 4 Protetores Proteção Fogão Anti Aderente Reutilizável",
-        "Price": 22.99,
+        "Price": null,
         "Sales": "2,3mil",
         "Shop Name": "BazarWu",
         "Commission Rate": 0.07,
@@ -4667,19 +4823,6 @@
         "Categoria": "Casa e Cozinha"
     },
     {
-        "Item Id": 23897665112,
-        "Item Name": "Kit Cobre Leito Colcha Casal Bouti 3 Peças Dupla Face Estampada Porta Travesseiro Aba Americana",
-        "Price": 79.9,
-        "Sales": "7mil",
-        "Shop Name": "Vianelli Oficial",
-        "Commission Rate": 0.23,
-        "Commission": 19.99,
-        "Product Link": "https://shopee.com.br/product/740101023/23897665112",
-        "Offer Link": "https://s.shopee.com.br/4q2VsHWsdH",
-        "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m8bxndm1c9w102.webp",
-        "Categoria": "Casa e Cozinha"
-    },
-    {
         "Item Id": 20397691367,
         "Item Name": "Kit Cobre Leito Colcha Queen 03 Peças Várias Cores",
         "Price": 87.6,
@@ -4812,7 +4955,7 @@
     {
         "Item Id": 21505212784,
         "Item Name": "Kit Cozinha Mesa Posta Glamour Café da Manhã/Tarde Jarra Queijeira Manteigueira Açucareiro e Boleira",
-        "Price": 69.03,
+        "Price": null,
         "Sales": "5,1mil",
         "Shop Name": "Loja Fernazzi",
         "Commission Rate": 0.08,
@@ -4851,7 +4994,7 @@
     {
         "Item Id": 23997758648,
         "Item Name": "Kit de potes mantimentos 5 peças plástico porta mantimentos para cozinha",
-        "Price": 25.0,
+        "Price": 25,
         "Sales": "3,9mil",
         "Shop Name": "Mix Lar Utilidades",
         "Commission Rate": 0.09,
@@ -4864,7 +5007,7 @@
     {
         "Item Id": 22592667357,
         "Item Name": "KIT de Utensílios Para Cozinha em Silicone e Bambu 12 Peças",
-        "Price": 35.0,
+        "Price": 35,
         "Sales": "2,4mil",
         "Shop Name": "Loja Lord",
         "Commission Rate": 0.03,
@@ -4901,19 +5044,6 @@
         "Categoria": "Casa e Cozinha"
     },
     {
-        "Item Id": 22093632236,
-        "Item Name": "Kit Jogo de Cozinha Silicone, Utensílios e Copo Suporte para Cozinheiro Cabo de Madeira MasterChef",
-        "Price": 17.88,
-        "Sales": "7,4mil",
-        "Shop Name": "SUPERTOFU SHOP",
-        "Commission Rate": 0.1,
-        "Commission": 1.79,
-        "Product Link": "https://shopee.com.br/product/1042165059/22093632236",
-        "Offer Link": "https://s.shopee.com.br/5VI34m5edm",
-        "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-7rfi7-m3p5b775a5hqae.webp",
-        "Categoria": "Casa e Cozinha"
-    },
-    {
         "Item Id": 23798119171,
         "Item Name": "KIT JOGO DE POTES 15 PECAS ARMAZENAR ALIMENTOS",
         "Price": 34.79,
@@ -4924,6 +5054,19 @@
         "Product Link": "https://shopee.com.br/product/732131461/23798119171",
         "Offer Link": "https://s.shopee.com.br/gDfvk3f9e",
         "Link Imagem": "https://down-tx-br.img.susercontent.com/br-11134207-7r98o-lzryp8l7r9k552.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 18997685603,
+        "Item Name": "Kit Jogo de Xícaras De Porcelana Café Expresso Com Pires Em Madeira Pinus",
+        "Price": 69.8,
+        "Sales": "1mil",
+        "Shop Name": "SMO Utilidades",
+        "Commission Rate": 0.09,
+        "Commission": 6.28,
+        "Product Link": "https://shopee.com.br/product/722021572/18997685603",
+        "Offer Link": "https://s.shopee.com.br/8ztMWIy605",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7rd4k-lvkf0t05gxrm64.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -4968,7 +5111,7 @@
     {
         "Item Id": 20021628189,
         "Item Name": "kit Porta mantimentos para arroz - feijão - alimentos potes organizadores - pote hermético cozinha",
-        "Price": 95.0,
+        "Price": 95,
         "Sales": 869,
         "Shop Name": "Espaço arte home",
         "Commission Rate": 0.07,
@@ -4981,7 +5124,7 @@
     {
         "Item Id": 22121021048,
         "Item Name": "kit prateleira ind. LUX COMPLETO 150CM envio 24hs pre encomenda devido a demanda alta",
-        "Price": 150.0,
+        "Price": 150,
         "Sales": "1,9mil",
         "Shop Name": "EU QUERO ARTE - revendedor aut.",
         "Commission Rate": 0.1,
@@ -5020,7 +5163,7 @@
     {
         "Item Id": 19952794031,
         "Item Name": "KONG 2-Tier Spice Rack Organizador De Condimentos Cozinha Montado Na Parede Louça De Mesa Suprimentos De Armazenamento",
-        "Price": 50.0,
+        "Price": 50,
         "Sales": "1,4mil",
         "Shop Name": "Kongfu Mall",
         "Commission Rate": 0.08,
@@ -5098,7 +5241,7 @@
     {
         "Item Id": 22697900294,
         "Item Name": "Manta de Sofá Piquet Algodão Cru Com Franjas Boho Algodão Decorativa Grande 1,50x2,10",
-        "Price": 60.0,
+        "Price": 60,
         "Sales": 298,
         "Shop Name": "Tok & Decor ",
         "Commission Rate": 0.11,
@@ -5145,6 +5288,19 @@
         "Product Link": "https://shopee.com.br/product/773997007/22820154888",
         "Offer Link": "https://s.shopee.com.br/1LT1ZD1lQU",
         "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134201-23010-8s354mhp7rmvee.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 22993084610,
+        "Item Name": "Mesa Retratil dobravel Borda Quadrada 120cm x 50cm de parede cozinha americana casa nova",
+        "Price": 140,
+        "Sales": "1,1mil",
+        "Shop Name": "Maclavi Móveis Matriz",
+        "Commission Rate": 0.07,
+        "Commission": 9.8,
+        "Product Link": "https://shopee.com.br/product/462129600/22993084610",
+        "Offer Link": "https://s.shopee.com.br/5L049ZC3R5",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-mab96kdaj6pi37.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -5213,6 +5369,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 22196095256,
+        "Item Name": "Multiprocessador Britânia 2 em 1 Compacto 300W BMP950 Plus",
+        "Price": 149.9,
+        "Sales": "21,1mil",
+        "Shop Name": "Bella Casa Eletro",
+        "Commission Rate": 0.03,
+        "Commission": 4.5,
+        "Product Link": "https://shopee.com.br/product/811879342/22196095256",
+        "Offer Link": "https://s.shopee.com.br/9ACmibxSf6",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7ravt-mad4rvudb68hd4.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 14265394231,
         "Item Name": "Organizador Multiuso Plasutil Geladeira Dispensa Cozinha Guarda e Conserva",
         "Price": 22.7,
@@ -5262,6 +5431,19 @@
         "Product Link": "https://shopee.com.br/product/279300851/19678597596",
         "Offer Link": "https://s.shopee.com.br/6AYHK5jMcl",
         "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7qukw-lfv6fwbxzrd246.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 23393690660,
+        "Item Name": "Panela de Pressão Elétrica Elgin PPR 4L 840w Aço Inox",
+        "Price": 269.99,
+        "Sales": "5,3mil",
+        "Shop Name": "BUMPER MAGAZINE",
+        "Commission Rate": 0.07,
+        "Commission": 18.9,
+        "Product Link": "https://shopee.com.br/product/342086228/23393690660",
+        "Offer Link": "https://s.shopee.com.br/5fcuYBAml7",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m5wztkit2gr4b7.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -5460,6 +5642,19 @@
         "Categoria": "Casa e Cozinha"
     },
     {
+        "Item Id": 20898671416,
+        "Item Name": "Porta Tempero Suporte Papel Toalha 10 Potes Etiquetas Mdf",
+        "Price": 69.6,
+        "Sales": 523,
+        "Shop Name": "Yper Criativo",
+        "Commission Rate": 0.13,
+        "Commission": 9.05,
+        "Product Link": "https://shopee.com.br/product/403618459/20898671416",
+        "Offer Link": "https://s.shopee.com.br/40UgZ7H89T",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/sg-11134201-7qvem-lijitejwrii7b4.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
         "Item Id": 23697635134,
         "Item Name": "Porta Toalha Suporte Toalheiro Banheiro Duplo Aço Inox Premium Retratil 90° Sem adesivos, precisa fazer furos",
         "Price": 78.99,
@@ -5527,7 +5722,7 @@
     {
         "Item Id": 22896434469,
         "Item Name": "Prateleira Industrial Suspensa 20x60, Organizadora Livros Decorações em Salas, Cozinhas, Lavanderia",
-        "Price": 26.0,
+        "Price": 26,
         "Sales": "14,3mil",
         "Shop Name": "Hallef Germano",
         "Commission Rate": 0.08,
@@ -5696,7 +5891,7 @@
     {
         "Item Id": 18099250064,
         "Item Name": "Sapateira Multiuso Para Calçados 7 Andares Organizador Desmontável",
-        "Price": 60.0,
+        "Price": 60,
         "Sales": "20,3mil",
         "Shop Name": "vipcasa",
         "Commission Rate": 0.09,
@@ -5761,7 +5956,7 @@
     {
         "Item Id": 23092848475,
         "Item Name": "Suporte Painel Tv Quarto Sala Painel Prateleira Até 32 Polegadas Star  - Cores",
-        "Price": 99.0,
+        "Price": 99,
         "Sales": "8,7mil",
         "Shop Name": "E & A Moveis",
         "Commission Rate": 0.13,
@@ -5774,7 +5969,7 @@
     {
         "Item Id": 21578586584,
         "Item Name": "Suporte Papel Higiênico Shaun Carneiro. Decoração, Presente, Banheiro, criatividade, Ovelha, hobbie",
-        "Price": 37.0,
+        "Price": 37,
         "Sales": 736,
         "Shop Name": "CEO 3D PRINTING",
         "Commission Rate": 0.16,
@@ -5808,6 +6003,19 @@
         "Product Link": "https://shopee.com.br/product/1041517511/20499076749",
         "Offer Link": "https://s.shopee.com.br/40TFI1BMfa",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-lnmxzuktskpb50.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 18898956348,
+        "Item Name": "Tabua Magica Descongelar Rápido Alimentos Super Pratico e Resistente - 3XZ OFFICIAL STORE",
+        "Price": 33.59,
+        "Sales": "3,6mil",
+        "Shop Name": "3XZ OFFICIAL STORE",
+        "Commission Rate": 0.1,
+        "Commission": 3.36,
+        "Product Link": "https://shopee.com.br/product/1053212537/18898956348",
+        "Offer Link": "https://s.shopee.com.br/5pwKkUA9Q8",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-lwu4odcr970f74.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -5878,7 +6086,7 @@
     {
         "Item Id": 16186654307,
         "Item Name": "Tapete Dobrável Dupla Face À Prova D'água De 180x100cm Para Bebês Engatinhando",
-        "Price": 112.0,
+        "Price": 112,
         "Sales": "11,8mil",
         "Shop Name": "Social Babe Pavilhão de Tendências",
         "Commission Rate": 0.08,
@@ -5982,7 +6190,7 @@
     {
         "Item Id": 18199392788,
         "Item Name": "Torneira Gourmet Com Filtro Slim para Cozinha Preta de PAREDE Mesa",
-        "Price": 119.99,
+        "Price": null,
         "Sales": "4,5mil",
         "Shop Name": "Minhacazza",
         "Commission Rate": 0.28,
@@ -5990,6 +6198,19 @@
         "Product Link": "https://shopee.com.br/product/412425678/18199392788",
         "Offer Link": "https://s.shopee.com.br/7zzO3Mw8Z1",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134207-7r98o-m6iaxob8h4cn19.webp",
+        "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 23928101038,
+        "Item Name": "Trio de Vasos Cachepot com Suporte Para Cactos ou Suculentas",
+        "Price": 29.92,
+        "Sales": "20,3mil",
+        "Shop Name": "Prismaa",
+        "Commission Rate": 0.21,
+        "Commission": 6.28,
+        "Product Link": "https://shopee.com.br/product/495134429/23928101038",
+        "Offer Link": "https://s.shopee.com.br/3VYPyCJ29X",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134201-23030-si0tln8kk4nvc6.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -6032,16 +6253,16 @@
         "Categoria": "Casa e Cozinha"
     },
     {
-        "Item Id": 21071530577,
+        "Item Id": 22998238861,
         "Item Name": "Varal De Chão Roupa Calcinha Grade 3 Andares Dobrável Portátil",
-        "Price": 99.9,
-        "Sales": "92,6mil",
-        "Shop Name": "Na Web",
-        "Commission Rate": 0.11,
-        "Commission": 10.44,
-        "Product Link": "https://shopee.com.br/product/325008325/21071530577",
-        "Offer Link": "https://s.shopee.com.br/AKNSQOBwSm",
-        "Link Imagem": "https://down-bs-br.img.susercontent.com/br-11134207-7r98o-m7augbm6ixf693.webp",
+        "Price": 89.9,
+        "Sales": "5,4mil",
+        "Shop Name": "Dona Cor",
+        "Commission Rate": 0.09,
+        "Commission": 8.09,
+        "Product Link": "https://shopee.com.br/product/1227023039/22998238861",
+        "Offer Link": "https://s.shopee.com.br/9zlti8uHyB",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m6se7iwi7hpja5.webp",
         "Categoria": "Casa e Cozinha"
     },
     {
@@ -6056,6 +6277,19 @@
         "Offer Link": "https://s.shopee.com.br/7fMhFUM5sW",
         "Link Imagem": "https://down-bs-br.img.susercontent.com/2ea743a9280bcd5305ba509887c47f99.webp",
         "Categoria": "Casa e Cozinha"
+    },
+    {
+        "Item Id": 23298287396,
+        "Item Name": "(Novo) Xiaomi Redmi 14C 8GB+256GB 50MP Dual SIM Android Celular Desbloqueado",
+        "Price": 768,
+        "Sales": "3,3mil",
+        "Shop Name": "Zheng He International LTDA",
+        "Commission Rate": 0.03,
+        "Commission": 23.04,
+        "Product Link": "https://shopee.com.br/product/996614334/23298287396",
+        "Offer Link": "https://s.shopee.com.br/6porwK6LOE",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m74kjaw1erzk51.webp",
+        "Categoria": "Eletrônicos"
     },
     {
         "Item Id": 21143796491,
@@ -6112,7 +6346,7 @@
     {
         "Item Id": 19896885709,
         "Item Name": "13 TWS Sem Fio Bluetooth 5.0 Air Pro 3 Fone De Ouvido Esportivo Com Microfone MING",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "204,3mil",
         "Shop Name": "Ming.store",
         "Commission Rate": 0.03,
@@ -6172,19 +6406,6 @@
         "Product Link": "https://shopee.com.br/product/874603044/20899575244",
         "Offer Link": "https://s.shopee.com.br/5KzVUJltf5",
         "Link Imagem": "https://down-tx-br.img.susercontent.com/sg-11134201-7rd5d-m6poksidswl7c9.webp",
-        "Categoria": "Eletrônicos"
-    },
-    {
-        "Item Id": 19297754145,
-        "Item Name": "400ML 6 Lâminas Espremedor Elétrico Mini Liquidificador Portátil De Suco De Alimentos Misturador Leite",
-        "Price": 32.19,
-        "Sales": "22mil",
-        "Shop Name": "Hybe Store",
-        "Commission Rate": 0.09,
-        "Commission": 2.9,
-        "Product Link": "https://shopee.com.br/product/432679242/19297754145",
-        "Offer Link": "https://s.shopee.com.br/3LDYSiM0y5",
-        "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-7rdxl-lya3mnf1b02wbc.webp",
         "Categoria": "Eletrônicos"
     },
     {
@@ -6268,7 +6489,7 @@
     {
         "Item Id": 23496971737,
         "Item Name": "Ampliador de Tela de Celular, Tela de Filme Com HD Formato de TV Antiga 12\"",
-        "Price": 45.0,
+        "Price": 45,
         "Sales": "1,5mil",
         "Shop Name": "XUXU BELEZA Oficial",
         "Commission Rate": 0.03,
@@ -6281,7 +6502,7 @@
     {
         "Item Id": 23936499469,
         "Item Name": "Apple watch Série 9 + Airpods pro TWS Fone De Ouvido Bluetooth Sem Fio",
-        "Price": 200.0,
+        "Price": 200,
         "Sales": 211,
         "Shop Name": "Apple iwatch Series9 ultra2 air max",
         "Commission Rate": 0.13,
@@ -6411,7 +6632,7 @@
     {
         "Item Id": 21198994907,
         "Item Name": "Batedor Misturador Mixer Elétrico para Bebidas Leite Café Clara de Ovos 2 EM 1",
-        "Price": 28.99,
+        "Price": null,
         "Sales": "13,3mil",
         "Shop Name": "C.J. IMPORTS.STORE",
         "Commission Rate": 0.08,
@@ -6606,7 +6827,7 @@
     {
         "Item Id": 23296542520,
         "Item Name": "Caixinha De Som G-speaker smart Carregador Indução Altofalante Bluetooth Android e IOS Luminaria",
-        "Price": 58.0,
+        "Price": 58,
         "Sales": "33,9mil",
         "Shop Name": "Booksy official Store ",
         "Commission Rate": 0.07,
@@ -6827,7 +7048,7 @@
     {
         "Item Id": 21897976728,
         "Item Name": "Celular IPhone 14/ 14 Pro e 14 pro Max 128 e 256gb Com Garantia + NF (VITRINE)",
-        "Price": 2999.9,
+        "Price": null,
         "Sales": 110,
         "Shop Name": "SMART TOP SHOP",
         "Commission Rate": 0.03,
@@ -6840,7 +7061,7 @@
     {
         "Item Id": 18897820945,
         "Item Name": "Celular Redmi Xiaomi 14C - Dual Sim Global - LANÇAMENTO",
-        "Price": 679.9,
+        "Price": null,
         "Sales": "2,8mil",
         "Shop Name": "SMART TOP SHOP",
         "Commission Rate": 0.03,
@@ -6905,7 +7126,7 @@
     {
         "Item Id": 22416636887,
         "Item Name": "computador  DELL i5-16GB -hd ssd 240gb monitor19`polegadas+kit teclado mouse cx som",
-        "Price": 989.0,
+        "Price": 989,
         "Sales": 104,
         "Shop Name": "ayres informatica",
         "Commission Rate": 0.03,
@@ -6918,7 +7139,7 @@
     {
         "Item Id": 21300538891,
         "Item Name": "computador completo core i7 16gb ssd 480 wi-fi- monitor 21,5' kit teclado e mouse caixa de som",
-        "Price": 1499.0,
+        "Price": 1499,
         "Sales": 18,
         "Shop Name": "ayres informatica",
         "Commission Rate": 0.03,
@@ -6931,7 +7152,7 @@
     {
         "Item Id": 23792104331,
         "Item Name": "Computador Completo I7 + 16gb Memória + 240gb Ssd Monitor 19",
-        "Price": 1273.0,
+        "Price": 1273,
         "Sales": 428,
         "Shop Name": "Billa",
         "Commission Rate": 0.08,
@@ -6944,7 +7165,7 @@
     {
         "Item Id": 21964270503,
         "Item Name": "Computador Cpu com wifi e acessorios -  ideal para estudo / trabalho - caixa de supermercado / comercio",
-        "Price": 949.0,
+        "Price": 949,
         "Sales": 9,
         "Shop Name": "Agaron",
         "Commission Rate": 0.03,
@@ -6983,7 +7204,7 @@
     {
         "Item Id": 10098548389,
         "Item Name": "computador i5 cpu gamer Barato completo 8gb ddr3 wifi ssd128g+hd320gb roda Roblox csgo et2 lol mine",
-        "Price": 999.0,
+        "Price": 999,
         "Sales": 21,
         "Shop Name": "Cyber Clube informatica",
         "Commission Rate": 0.03,
@@ -6996,7 +7217,7 @@
     {
         "Item Id": 12872105266,
         "Item Name": "Computador i5 gamer barato 8gb ssd128+hd500 placa de video gt 610 roda autocad corel cs lol et2 mine",
-        "Price": 1299.0,
+        "Price": 1299,
         "Sales": 84,
         "Shop Name": "Cyber Clube informatica",
         "Commission Rate": 0.03,
@@ -7009,7 +7230,7 @@
     {
         "Item Id": 23797387485,
         "Item Name": "Computador Intel I5 Ssd 480gb 16gb Memória Ram Monitor 20",
-        "Price": 1188.0,
+        "Price": 1188,
         "Sales": "1,1mil",
         "Shop Name": "equipe2000",
         "Commission Rate": 0.07,
@@ -7022,7 +7243,7 @@
     {
         "Item Id": 22618469954,
         "Item Name": "computador Lenovo thinkcentre Intel core  i5 4°geração wifi 16GB ssd 240gb  com teclado mouse cx de som e cabo",
-        "Price": 779.0,
+        "Price": 779,
         "Sales": 82,
         "Shop Name": "ayres informatica",
         "Commission Rate": 0.03,
@@ -7126,7 +7347,7 @@
     {
         "Item Id": 20699260816,
         "Item Name": "Cozedor Elétrico Multifuncional 3 em 1 - Cozinhe Ovos, Legumes e Mais de Forma Rápida e Segura 110V",
-        "Price": 59.06,
+        "Price": null,
         "Sales": 610,
         "Shop Name": "A Loja do Leo",
         "Commission Rate": 0.15,
@@ -7269,7 +7490,7 @@
     {
         "Item Id": 22293168519,
         "Item Name": "Esfregão Elétrico Sem fio Escova De Limpeza Pesada Multiuso 360 Recarregável Giratória",
-        "Price": 65.0,
+        "Price": 65,
         "Sales": "37,3mil",
         "Shop Name": "TX ELETRONICOS Store ",
         "Commission Rate": 0.07,
@@ -7438,7 +7659,7 @@
     {
         "Item Id": 23597427364,
         "Item Name": "Fone de Ouvido Sem fio Bluetooth Estéreo Alta Fidelidade Super Bass Qualcomm Chip HD Mic P9",
-        "Price": 30.0,
+        "Price": 30,
         "Sales": "15,9mil",
         "Shop Name": "FENG .",
         "Commission Rate": 0.07,
@@ -7503,7 +7724,7 @@
     {
         "Item Id": 19499664591,
         "Item Name": "Fritadeira Elétrica Air Fryer Oven Mondial Forno 12L 110v 2000W AFO-12L-BI",
-        "Price": 649.9,
+        "Price": null,
         "Sales": 773,
         "Shop Name": "VGSHOP ",
         "Commission Rate": 0.03,
@@ -7529,7 +7750,7 @@
     {
         "Item Id": 20298003952,
         "Item Name": "Fritadeira Eletrica Airfryer Elgin Oven Fry 4 Em 1 12L 1800W",
-        "Price": 449.0,
+        "Price": null,
         "Sales": "3,4mil",
         "Shop Name": "ENGAGE-ELETRO",
         "Commission Rate": 0.03,
@@ -7594,7 +7815,7 @@
     {
         "Item Id": 17460112427,
         "Item Name": "GOOJODOQ GD11 plus Caneta Stylus para iPad Stylus Pencil 9th Gen 8th 7th 6th Pro 11 12.9 2019 2020 2021 2018 9.7 Mini 6",
-        "Price": 79.0,
+        "Price": 79,
         "Sales": "8,2mil",
         "Shop Name": "Goojodoq Official Store",
         "Commission Rate": 0.12,
@@ -7607,7 +7828,7 @@
     {
         "Item Id": 21928965852,
         "Item Name": "GOOJODOQ Teclado Ipad Sem Fio Português Retroiluminado E Mouse Recarregável Bluetooth Silencioso Ultrafino  Para tablets Android Windows IOS",
-        "Price": 78.0,
+        "Price": 78,
         "Sales": "7,5mil",
         "Shop Name": "Goojodoq Official Store",
         "Commission Rate": 0.12,
@@ -7672,7 +7893,7 @@
     {
         "Item Id": 22198082571,
         "Item Name": "Infinix Smart 9, 128GB 4GB RAM, Câmera 13MP, Processador Mediatek Hélio G81, Bateria 5000MAH, Versão global, Novo",
-        "Price": 629.0,
+        "Price": null,
         "Sales": "1,9mil",
         "Shop Name": "MaxPrime Digital",
         "Commission Rate": 0.03,
@@ -7698,7 +7919,7 @@
     {
         "Item Id": 23998202552,
         "Item Name": "INOVA Caixa de Som Bluetooth Portátil 16W HiFi TWS Caixinha de Som com RGB FM IPX6 Som Estéreo Graves Intensos",
-        "Price": 95.0,
+        "Price": 95,
         "Sales": 444,
         "Shop Name": "BASIKE&INOVA-SHOP",
         "Commission Rate": 0.13,
@@ -7711,7 +7932,7 @@
     {
         "Item Id": 25951909013,
         "Item Name": "Ipad mini 1 (16G/32G/64G) Tablet Desbloqueador WiFi De 7,9 Polegadas iOS Uso 90 Novo",
-        "Price": 182.0,
+        "Price": 182,
         "Sales": "2,6mil",
         "Shop Name": "Preferred Digital",
         "Commission Rate": 0.09,
@@ -7724,7 +7945,7 @@
     {
         "Item Id": 26202262126,
         "Item Name": "Ipad mini 1 /2 /3 (16G /32G /64G) Dual Core 7.9inch WiFi Desbloquear Tablet iOS Uso 90 Novo",
-        "Price": 182.0,
+        "Price": 182,
         "Sales": "10,5mil",
         "Shop Name": "kaixin11.br",
         "Commission Rate": 0.08,
@@ -7776,7 +7997,7 @@
     {
         "Item Id": 23493397958,
         "Item Name": "Kit 16 Pçs/Set Profissional Aço inoxidável Para Manicure Pedicure",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "21,1mil",
         "Shop Name": "Arara.store",
         "Commission Rate": 0.11,
@@ -8062,7 +8283,7 @@
     {
         "Item Id": 5380635513,
         "Item Name": "Luminária de Mesa de LED Playstation Símbolos Gamer PS4 PS5",
-        "Price": 80.0,
+        "Price": 80,
         "Sales": "2,2mil",
         "Shop Name": "LUMINARIAS.DE.LED",
         "Commission Rate": 0.11,
@@ -8270,7 +8491,7 @@
     {
         "Item Id": 22493825913,
         "Item Name": "Mesa de Apoio Para Notebook P/ Sala Quarto",
-        "Price": 152.0,
+        "Price": 152,
         "Sales": 0,
         "Shop Name": "Anjos e Arcanjos",
         "Commission Rate": 0.03,
@@ -8296,7 +8517,7 @@
     {
         "Item Id": 20498103083,
         "Item Name": "Mesa Gamer Formato L Para Computadores E Acessórios Conforto e Organização no Escritório Cor Branco",
-        "Price": 150.0,
+        "Price": 150,
         "Sales": 14,
         "Shop Name": "KC Vendas",
         "Commission Rate": 0.03,
@@ -8309,7 +8530,7 @@
     {
         "Item Id": 22791523448,
         "Item Name": "Mini Aspirador De pó Portátil Automotivo e Casa Potente Recarregável",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "153,4mil",
         "Shop Name": "ANJ.GG store",
         "Commission Rate": 0.07,
@@ -8374,7 +8595,7 @@
     {
         "Item Id": 23798057199,
         "Item Name": "Mini luz de preenchimento rgb /luz branco portátil para celular foto slr selfie vlog fotografia",
-        "Price": 39.0,
+        "Price": 39,
         "Sales": "2,2mil",
         "Shop Name": "Banana.Store_",
         "Commission Rate": 0.11,
@@ -8452,7 +8673,7 @@
     {
         "Item Id": 18931705150,
         "Item Name": "Mini Processador Triturador Sem Fio Elétrico 250ML De Alimentos Para Legumes Alho Gengibre",
-        "Price": 13.71,
+        "Price": null,
         "Sales": "78mil",
         "Shop Name": "RISESHOP_brasil",
         "Commission Rate": 0.19,
@@ -8738,7 +8959,7 @@
     {
         "Item Id": 20399096791,
         "Item Name": "Pc Desktop Fácil Gamer I5 16gb Geforce Placa de video 4GB Wifi Ssd 240gb Hdmi",
-        "Price": 1550.0,
+        "Price": 1550,
         "Sales": 194,
         "Shop Name": "Varejao Informatica",
         "Commission Rate": 0.08,
@@ -8777,7 +8998,7 @@
     {
         "Item Id": 13826472226,
         "Item Name": "pen drive para celular ios Android e computador flashdevice hd 64GB",
-        "Price": 64.0,
+        "Price": 64,
         "Sales": 37,
         "Shop Name": "daitecom",
         "Commission Rate": 0.03,
@@ -8907,7 +9128,7 @@
     {
         "Item Id": 19404491985,
         "Item Name": "Rastreador gps De Carro/mini smart Magnético Com Gravador De Voz Para Veículos/Crianças anti-Perda",
-        "Price": 22.0,
+        "Price": 22,
         "Sales": "9mil",
         "Shop Name": "i12/y68/reloj/smartwatch",
         "Commission Rate": 0.08,
@@ -8933,7 +9154,7 @@
     {
         "Item Id": 23492630391,
         "Item Name": "Régua Filtro de Linha com 7 Tomadas Extensão Elétrica 1 Universal 4 USB Bivolt 10A 110v/220v Cabo de 2 Metros Seguro e confiável",
-        "Price": 35.8,
+        "Price": null,
         "Sales": "40,4mil",
         "Shop Name": "FENG .",
         "Commission Rate": 0.07,
@@ -9050,7 +9271,7 @@
     {
         "Item Id": 8814411028,
         "Item Name": "Revitalizador Cera de Plásticos NewPower Renova Parachoque o melhor e Envio Rápido Garantido",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "77,2mil",
         "Shop Name": "Juliavendasonline",
         "Commission Rate": 0.09,
@@ -9180,7 +9401,7 @@
     {
         "Item Id": 19376083184,
         "Item Name": "SmartWatch QCY GTC S1 - Relógio Smart Bluetooth 5.0 - À prova D'água IPX8 até 1 metro",
-        "Price": 199.0,
+        "Price": 199,
         "Sales": "5,3mil",
         "Shop Name": "QCY Brasil Loja Oficial",
         "Commission Rate": 0.03,
@@ -9388,7 +9609,7 @@
     {
         "Item Id": 5258089158,
         "Item Name": "Suporte Tripé Para Mesa Celular Mini Pedestal Ajustável 360°",
-        "Price": 20.0,
+        "Price": 20,
         "Sales": "19,3mil",
         "Shop Name": "Mtres Utilidades",
         "Commission Rate": 0.19,
@@ -9570,7 +9791,7 @@
     {
         "Item Id": 22693508474,
         "Item Name": "Vassoura Mágica 3 em 1: Esfregão Rodo Giratório para Limpeza Ágil 360°",
-        "Price": 40.0,
+        "Price": 40,
         "Sales": "4,5mil",
         "Shop Name": "Avilla Distribuidora",
         "Commission Rate": 0.07,
@@ -9583,7 +9804,7 @@
     {
         "Item Id": 23993384831,
         "Item Name": "Ventilador de Coluna 103cm-130cm ajuste de altura livremente, ventilador de pé 110v/220v",
-        "Price": 118.0,
+        "Price": 118,
         "Sales": "7,8mil",
         "Shop Name": "MOEN HOME",
         "Commission Rate": 0.07,
@@ -9724,6 +9945,32 @@
         "Categoria": "Esporte e Lazer"
     },
     {
+        "Item Id": 22098494289,
+        "Item Name": "Belifou Garrafa Térmica Copo Barbie 1200ml Inox Com Tampa e Canudo Personalizado Modelo",
+        "Price": 49.99,
+        "Sales": "5,1mil",
+        "Shop Name": "Belifou Talheres",
+        "Commission Rate": 0.09,
+        "Commission": 4.5,
+        "Product Link": "https://shopee.com.br/product/1224363395/22098494289",
+        "Offer Link": "https://s.shopee.com.br/6fVRk16yjD",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134211-7r98o-m9r4sy04ela1b5.webp",
+        "Categoria": "Esporte e Lazer"
+    },
+    {
+        "Item Id": 16892189215,
+        "Item Name": "Bicicleta  Aro 29 GT Sprint MX7 24V index Freio Disco Alumínio Suspensão Aero MTB",
+        "Price": 829,
+        "Sales": "14,9mil",
+        "Shop Name": "Southbike Oficial",
+        "Commission Rate": 0.08,
+        "Commission": 66.32,
+        "Product Link": "https://shopee.com.br/product/912905460/16892189215",
+        "Offer Link": "https://s.shopee.com.br/50NDkxDK7h",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m5ahnmktxi2a11.webp",
+        "Categoria": "Esporte e Lazer"
+    },
+    {
         "Item Id": 18297947700,
         "Item Name": "Calça Legging Feminina Grossa Cintura Alta Anti Transparência Leg Fitness Academia Suplex",
         "Price": 19.94,
@@ -9739,7 +9986,7 @@
     {
         "Item Id": 19099183345,
         "Item Name": "Camisa Camiseta Masculina e Feminina Uv Proteção Solar Estampa Peixe Pescaria",
-        "Price": 27.0,
+        "Price": 27,
         "Sales": "13,8mil",
         "Shop Name": "Discovery H2O camisetas",
         "Commission Rate": 0.07,
@@ -9843,7 +10090,7 @@
     {
         "Item Id": 22693216282,
         "Item Name": "Conjuntos Top Shorts  plus size Academia   Los Angeles",
-        "Price": 37.0,
+        "Price": 37,
         "Sales": "20,8mil",
         "Shop Name": "GBoutlettt",
         "Commission Rate": 0.07,
@@ -9893,6 +10140,19 @@
         "Categoria": "Esporte e Lazer"
     },
     {
+        "Item Id": 20899541747,
+        "Item Name": "Equipamento auxiliar de abdominais fitness unissex ventosa muscular abdominal dispositivo de pé fixo -V2",
+        "Price": 59,
+        "Sales": "4,5mil",
+        "Shop Name": "ZAKKA BAZAR  LTDA",
+        "Commission Rate": 0.11,
+        "Commission": 6.49,
+        "Product Link": "https://shopee.com.br/product/711129134/20899541747",
+        "Offer Link": "https://s.shopee.com.br/2fzIyfMCrL",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1dwp4s8ua1s2f.webp",
+        "Categoria": "Esporte e Lazer"
+    },
+    {
         "Item Id": 3480031928,
         "Item Name": "Garrafa de Água 2L/1L/700ML/500ML Treino Academia BPA Free com Garantia ENVIO EM 24HORAS",
         "Price": 12.98,
@@ -9908,7 +10168,7 @@
     {
         "Item Id": 15193122653,
         "Item Name": "Garrafa Térmica Inox Com Copo 500ml Água Café Chá Caneca Frio Quente Com duas Xicaras",
-        "Price": 36.0,
+        "Price": 36,
         "Sales": "2,1mil",
         "Shop Name": "XQWELETRONICOS",
         "Commission Rate": 0.15,
@@ -10051,7 +10311,7 @@
     {
         "Item Id": 17758538492,
         "Item Name": "Kit Funcional Completo C/ 6 Itens :-  caneleira de 3kg  + halter de 1kg + colchonete + Roda + Extensor + Corda",
-        "Price": 171.99,
+        "Price": null,
         "Sales": "1,7mil",
         "Shop Name": "Cheers Fitness",
         "Commission Rate": 0.07,
@@ -10194,7 +10454,7 @@
     {
         "Item Id": 22898127406,
         "Item Name": "300 Unidades Abraçadeira Nylon 3 tamanhos 10, 15 e 20 cm X 2,5 mm Enforca Gato Presilha Lacre Fita",
-        "Price": 22.0,
+        "Price": 22,
         "Sales": "2,2mil",
         "Shop Name": "Fluke Market",
         "Commission Rate": 0.08,
@@ -10220,7 +10480,7 @@
     {
         "Item Id": 22892833180,
         "Item Name": "40 Peças / 46 Peças Jogo De Chave Catraca Caixa De Ferramentas Completa Reversível Soquetes Maleta",
-        "Price": 29.9,
+        "Price": null,
         "Sales": "56,7mil",
         "Shop Name": "RISESHOP_brasil",
         "Commission Rate": 0.19,
@@ -10636,7 +10896,7 @@
     {
         "Item Id": 11795327154,
         "Item Name": "Ferramenta De Desmontagem De Chave De Fenda Específica De Computador (Estrela)",
-        "Price": 8.0,
+        "Price": 8,
         "Sales": "11,8mil",
         "Shop Name": "jovecome.br",
         "Commission Rate": 0.07,
@@ -10792,7 +11052,7 @@
     {
         "Item Id": 23692674236,
         "Item Name": "Jogo de Chave Torx Curta 9 Peças Aço Cromo Vanadium T10 A T50",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "10,9mil",
         "Shop Name": "Mini Stor Ferramentas e Variedades",
         "Commission Rate": 0.1,
@@ -10865,19 +11125,6 @@
         "Product Link": "https://shopee.com.br/product/1003731394/21997008820",
         "Offer Link": "https://s.shopee.com.br/4fizJB8N9l",
         "Link Imagem": "https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m8cpkyvpfwmp84.webp",
-        "Categoria": "Ferramentas"
-    },
-    {
-        "Item Id": 23293341753,
-        "Item Name": "Jogo De Soquete Sextavado 1/2 Catraca 12 Peças 10 a 24mm com Extensão",
-        "Price": 49.99,
-        "Sales": "3,4mil",
-        "Shop Name": "jcarsi.br",
-        "Commission Rate": 0.03,
-        "Commission": 1.5,
-        "Product Link": "https://shopee.com.br/product/1283696396/23293341753",
-        "Offer Link": "https://s.shopee.com.br/5Kyg6P5pob",
-        "Link Imagem": "https://down-ws-br.img.susercontent.com/cn-11134207-7ras8-m791goectjf9db.webp",
         "Categoria": "Ferramentas"
     },
     {
@@ -11065,7 +11312,7 @@
     {
         "Item Id": 23593623800,
         "Item Name": "KIT Furadeira Parafusadeira E Lixadeira Esmerilhadeira E Serra Tico Tico Com Peças E Maleta~",
-        "Price": 101.0,
+        "Price": 101,
         "Sales": "1,5mil",
         "Shop Name": "Damai loja~",
         "Commission Rate": 0.08,
@@ -11073,6 +11320,19 @@
         "Product Link": "https://shopee.com.br/product/1213048069/23593623800",
         "Offer Link": "https://s.shopee.com.br/7pg14zwJkA",
         "Link Imagem": "https://down-ws-br.img.susercontent.com/br-11134207-7r98o-m4vgdff2uumdb4.webp",
+        "Categoria": "Ferramentas"
+    },
+    {
+        "Item Id": 8716065733,
+        "Item Name": "Kit Jogo De Ferramentas 200 Pcs C/Soquetes Chaves 0",
+        "Price": "5456 Titanium",
+        "Sales": 86.9,
+        "Shop Name": "21mil",
+        "Commission Rate": "Snel Ferramentas",
+        "Commission": 0.1,
+        "Product Link": 8.69,
+        "Offer Link": "https://shopee.com.br/product/386938697/8716065733",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m4ry0tk0y9thde.webp",
         "Categoria": "Ferramentas"
     },
     {
@@ -11115,9 +11375,22 @@
         "Categoria": "Ferramentas"
     },
     {
+        "Item Id": 21997384190,
+        "Item Name": "Kit Jogo Ferramentas 248 Peças Maleta Serviço Gerais Soquetes Chaves Combinada Luva Pigmentada",
+        "Price": 152.99,
+        "Sales": "2,9mil",
+        "Shop Name": "Comercial Vipasa",
+        "Commission Rate": 0.18,
+        "Commission": 27.54,
+        "Product Link": "https://shopee.com.br/product/408128510/21997384190",
+        "Offer Link": "https://s.shopee.com.br/2qIjAyLZVL",
+        "Link Imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8w6za341p1ecb@resize_w450_nl.webp",
+        "Categoria": "Ferramentas"
+    },
+    {
         "Item Id": 23193117677,
         "Item Name": "Kit Motosserra Adaptador Para Esmerilhadeira Angular Aço 12 pol para envio imediato",
-        "Price": 69.0,
+        "Price": 69,
         "Sales": "7mil",
         "Shop Name": "applilicen.br",
         "Commission Rate": 0.07,
@@ -11143,7 +11416,7 @@
     {
         "Item Id": 22597659260,
         "Item Name": "Kit Parafusadeira/Furadeira 48 Peças À Bateria Carregador Usb",
-        "Price": 45.0,
+        "Price": 45,
         "Sales": "12,8mil",
         "Shop Name": "H&A eletronicos",
         "Commission Rate": 0.03,
@@ -11234,7 +11507,7 @@
     {
         "Item Id": 19499322859,
         "Item Name": "Lavadora de alta pressão 1300 Libras LAV1300 Potência 1200w Com Acessórios VONDER",
-        "Price": 339.0,
+        "Price": 339,
         "Sales": "15,7mil",
         "Shop Name": "Bwinx",
         "Commission Rate": 0.09,
@@ -11429,7 +11702,7 @@
     {
         "Item Id": 19652542651,
         "Item Name": "Nível Laser Profissional Trena Level Pro3 Estágios Nivelador",
-        "Price": 23.0,
+        "Price": 23,
         "Sales": "21,4mil",
         "Shop Name": "Hello Jimmy",
         "Commission Rate": 0.08,
@@ -11440,9 +11713,22 @@
         "Categoria": "Ferramentas"
     },
     {
+        "Item Id": 23193407563,
+        "Item Name": "Parafusadeira Furadeira 12V 21V 2 Baterias \\\\ 1 Bateria Com Maleta e Acessórios Completo \\\\ Mini Parafusadeira 3",
+        "Price": 59.99,
+        "Sales": "35,7mil",
+        "Shop Name": "vipcasa",
+        "Commission Rate": 0.11,
+        "Commission": 6.6,
+        "Product Link": "https://shopee.com.br/product/1024782317/23193407563",
+        "Offer Link": "https://s.shopee.com.br/5VJULsBQ66",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m106y9pfreou43.webp",
+        "Categoria": "Ferramentas"
+    },
+    {
         "Item Id": 26777234214,
         "Item Name": "Parafusadeira Furadeira 26V 2 Baterias Sem Fio Impacto Com Maleta Completo Broca Bits Maleta Vonder (110V/220V)~",
-        "Price": 138.0,
+        "Price": 138,
         "Sales": "2,1mil",
         "Shop Name": "Loja LJP",
         "Commission Rate": 0.09,
@@ -11507,7 +11793,7 @@
     {
         "Item Id": 20705549413,
         "Item Name": "Pistola Elétrica para Pintura Pulverizador de tinta Compressor com Bico de Metal 450w TSSAPER",
-        "Price": 139.9,
+        "Price": null,
         "Sales": "21,5mil",
         "Shop Name": "DEFFER FERRAMENTAS",
         "Commission Rate": 0.1,
@@ -11702,7 +11988,7 @@
     {
         "Item Id": 17392766339,
         "Item Name": "Blocos de Montar 128 peças Infantil Educativo Cordenação Motora Fácil Encaixe",
-        "Price": 46.0,
+        "Price": 46,
         "Sales": 501,
         "Shop Name": "TOYS CLUE",
         "Commission Rate": 0.08,
@@ -11767,7 +12053,7 @@
     {
         "Item Id": 19598983714,
         "Item Name": "Calça Jeans Infantil Preta Premium Sarja Regulagem Menino 1 ao 10 anos",
-        "Price": 44.0,
+        "Price": 44,
         "Sales": 181,
         "Shop Name": "H.M Modas",
         "Commission Rate": 0.13,
@@ -11819,7 +12105,7 @@
     {
         "Item Id": 25972651043,
         "Item Name": "Cartoon Stuffed Dolls Pink Blue Anime Brinquedos Lilo E Stitch Stich Pelúcia Brinquedos Recheados Presentes De Natal Para Crianças XBVC",
-        "Price": 32.0,
+        "Price": 32,
         "Sales": "5,9mil",
         "Shop Name": "aierbude.br",
         "Commission Rate": 0.13,
@@ -11897,7 +12183,7 @@
     {
         "Item Id": 23491538710,
         "Item Name": "Conjunto Infantil de Frio Agasalho Menina Inverno Stitch",
-        "Price": 66.0,
+        "Price": 66,
         "Sales": "12,3mil",
         "Shop Name": "PETIT BOY KIDS",
         "Commission Rate": 0.09,
@@ -11988,7 +12274,7 @@
     {
         "Item Id": 24676773805,
         "Item Name": "Homem Aranha Pijama infantil Meninos e Meninas Calças de manga comprida de outono Loungewear Dinosaur Conjunto infantil",
-        "Price": 39.0,
+        "Price": 39,
         "Sales": 254,
         "Shop Name": "Infantil.br",
         "Commission Rate": 0.07,
@@ -12053,7 +12339,7 @@
     {
         "Item Id": 23796877970,
         "Item Name": "Kit 2 Calças Jeans menino Reta Skinny Masculina Premium com Regulagem",
-        "Price": 78.0,
+        "Price": 78,
         "Sales": "1,3mil",
         "Shop Name": "H.M Modas",
         "Commission Rate": 0.13,
@@ -12261,7 +12547,7 @@
     {
         "Item Id": 21797664781,
         "Item Name": "Papete Infantil Patrulha Canina PAW Nuvem Slide Juvenil Unissex Chinelo Sandália Macio Lindas cores",
-        "Price": 39.0,
+        "Price": 39,
         "Sales": "3,7mil",
         "Shop Name": "SPEEDyMARCAS",
         "Commission Rate": 0.09,
@@ -12376,9 +12662,22 @@
         "Categoria": "Infantil"
     },
     {
+        "Item Id": 20999237907,
+        "Item Name": "Tenis Infantil Botinha Menina Menino Masculino Feminino Personagen",
+        "Price": 49.9,
+        "Sales": "3,8mil",
+        "Shop Name": "CALÇADOS_LORRANY",
+        "Commission Rate": 0.16,
+        "Commission": 7.98,
+        "Product Link": "https://shopee.com.br/product/1114588023/20999237907",
+        "Offer Link": "https://s.shopee.com.br/2qIjAyLZWM",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-ltzi5m4nll7876.webp",
+        "Categoria": "Infantil"
+    },
+    {
         "Item Id": 22197740110,
         "Item Name": "Tenis Infantil Lilo e Stitch e Ursinhos Carinhosos, Cores Novas, Tenis Super Lindos e Confortavel!",
-        "Price": 65.0,
+        "Price": 65,
         "Sales": "6mil",
         "Shop Name": "SPEEDyMARCAS",
         "Commission Rate": 0.09,
@@ -12508,7 +12807,7 @@
     {
         "Item Id": 22593694088,
         "Item Name": "Joelheiras Baby Toddler Algodão Puro Resistente a Choques para Crianças Gatinha",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "6,5mil",
         "Shop Name": "Oncomercio Shop",
         "Commission Rate": 0.09,
@@ -12781,7 +13080,7 @@
     {
         "Item Id": 14890751406,
         "Item Name": "Blusa  moletom canguru unissex Gatinho na Lua",
-        "Price": 69.0,
+        "Price": 69,
         "Sales": 1,
         "Shop Name": "Alien Way",
         "Commission Rate": 0.13,
@@ -12820,7 +13119,7 @@
     {
         "Item Id": 22293107768,
         "Item Name": "Blusa Feminina Gola Alta T-shirt 100% Algodao Ribana Camiseta Feminina Luxo",
-        "Price": 39.0,
+        "Price": 39,
         "Sales": "1,9mil",
         "Shop Name": "Rafaello moda feminina",
         "Commission Rate": 0.11,
@@ -13015,7 +13314,7 @@
     {
         "Item Id": 18597636474,
         "Item Name": "Calça Cargo larga Unisex Larga Skate,Casual estilo Cordão de Ajuste",
-        "Price": 48.0,
+        "Price": 48,
         "Sales": "15,3mil",
         "Shop Name": "Fashion Vitrine_",
         "Commission Rate": 0.11,
@@ -13236,7 +13535,7 @@
     {
         "Item Id": 9313338482,
         "Item Name": "Canguru Moletom Casaco Blusão Frio Xxxtentacion Rip Rapper Bad",
-        "Price": 69.0,
+        "Price": 69,
         "Sales": "1,7mil",
         "Shop Name": "Wannabeoficial",
         "Commission Rate": 0.13,
@@ -13249,7 +13548,7 @@
     {
         "Item Id": 24360796364,
         "Item Name": "Casaco De Algodão Espesso De Inverno Para Homens Novo Com Capuz",
-        "Price": 160.0,
+        "Price": 160,
         "Sales": 309,
         "Shop Name": "quicksliver.br",
         "Commission Rate": 0.07,
@@ -13390,6 +13689,19 @@
         "Categoria": "Moda e Acessórios"
     },
     {
+        "Item Id": 21897384283,
+        "Item Name": "Conjunto Blazer Cropped E Short Saia Moda Feminina outono Inverno REF: MONALIZA",
+        "Price": 119,
+        "Sales": "1,1mil",
+        "Shop Name": "Four Seasons Store BR | FS Concept",
+        "Commission Rate": 0.15,
+        "Commission": 17.85,
+        "Product Link": "https://shopee.com.br/product/684369439/21897384283",
+        "Offer Link": "https://s.shopee.com.br/yXnlWMGZ",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m1qxjl1gk0y92c.webp",
+        "Categoria": "Moda e Acessórios"
+    },
+    {
         "Item Id": 18362575959,
         "Item Name": "Conjunto Cropped Short Feminino Crepe Duna Moda Feminina 3",
         "Price": 38.99,
@@ -13444,7 +13756,7 @@
     {
         "Item Id": 23297667796,
         "Item Name": "Conjunto Feminino Cropped De Alça E Saia Longa Estampa Moda Farm Floral",
-        "Price": 99.0,
+        "Price": 99,
         "Sales": "1,6mil",
         "Shop Name": "Alecrim moda feminina",
         "Commission Rate": 0.16,
@@ -13530,6 +13842,19 @@
         "Product Link": "https://shopee.com.br/product/1096822541/17396479340",
         "Offer Link": "https://s.shopee.com.br/707ZdwP6eu",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/sg-11134201-7rbk8-ln5f3tb92fqkb2.webp",
+        "Categoria": "Moda e Acessórios"
+    },
+    {
+        "Item Id": 25913708978,
+        "Item Name": "Homens Moda Moda Moda Casual Casaco Esportivo Exterior Casaco Esportivo Primavera Outono Motocicleta Militar",
+        "Price": 100.41,
+        "Sales": 218,
+        "Shop Name": "Men's bomber jacket",
+        "Commission Rate": 0.08,
+        "Commission": 8.03,
+        "Product Link": "https://shopee.com.br/product/1028800977/25913708978",
+        "Offer Link": "https://s.shopee.com.br/9KWCuuwpJz",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/cn-11134207-7ras8-m2b6ihxkja0u5b.webp",
         "Categoria": "Moda e Acessórios"
     },
     {
@@ -13728,9 +14053,22 @@
         "Categoria": "Moda e Acessórios"
     },
     {
+        "Item Id": 18899719237,
+        "Item Name": "Kit 2 Conjunto Moletom Feminino Inverno Frio Flanelado Zíper Capuz",
+        "Price": 135.94,
+        "Sales": 51,
+        "Shop Name": "Elegance Moda Feminina ofc",
+        "Commission Rate": 0.11,
+        "Commission": 14.95,
+        "Product Link": "https://shopee.com.br/product/326475078/18899719237",
+        "Offer Link": "https://s.shopee.com.br/9f93JWvYe1",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m8z7yjpfdw6xbc.webp",
+        "Categoria": "Moda e Acessórios"
+    },
+    {
         "Item Id": 23793246795,
         "Item Name": "Kit 2 Mochilas Bolsa Viagem Resistente Coreana Masculina Feminina- Cor Aleatória",
-        "Price": 54.0,
+        "Price": 54,
         "Sales": "12,8mil",
         "Shop Name": "eletromix021",
         "Commission Rate": 0.03,
@@ -13951,7 +14289,7 @@
     {
         "Item Id": 23897972638,
         "Item Name": "KIT 3 Shorts masculinos Bermuda Jeans rasgados Estilo fashion masculino Outlet de fábrica",
-        "Price": 49.0,
+        "Price": 49,
         "Sales": "5,1mil",
         "Shop Name": "Fashion Modas T.&.E",
         "Commission Rate": 0.13,
@@ -14159,7 +14497,7 @@
     {
         "Item Id": 21997732790,
         "Item Name": "Kit 5 Conjunto Pijama Baby Doll Short Doll Estampado Sem Bojo Original ou Kit 3 Conjunto",
-        "Price": 35.0,
+        "Price": 35,
         "Sales": "39mil",
         "Shop Name": "Encanto Íntimo",
         "Commission Rate": 0.08,
@@ -14289,7 +14627,7 @@
     {
         "Item Id": 21875734087,
         "Item Name": "Kit Bota Coturno Tratorado e Bolsa Baladinha Várias Cores Envio Imediato",
-        "Price": 158.6,
+        "Price": null,
         "Sales": "1,8mil",
         "Shop Name": "ClasseK Calçados Oficial",
         "Commission Rate": 0.07,
@@ -14458,7 +14796,7 @@
     {
         "Item Id": 22358944314,
         "Item Name": "Lovito Casual Bolsa Feminina Pequena de Ombro de Patchwork com Corrente LNA32135 (Off White/Preto)",
-        "Price": 37.56,
+        "Price": null,
         "Sales": "24,6mil",
         "Shop Name": "Lovito Loja Oficial",
         "Commission Rate": 0.13,
@@ -14557,6 +14895,19 @@
         "Product Link": "https://shopee.com.br/product/824474412/23931899885",
         "Offer Link": "https://s.shopee.com.br/x6Sba3uU",
         "Link Imagem": "https://down-zl-br.img.susercontent.com/br-11134201-23030-i9ipbpxgmqov21.webp",
+        "Categoria": "Moda e Acessórios"
+    },
+    {
+        "Item Id": 19898956424,
+        "Item Name": "Macacão Longo Pantalona  Feminino com Cinto | Tecido Duna Elegante | Sem Bojo | Com Cinto Removível | Pronta Entrega",
+        "Price": 81.47,
+        "Sales": "2,5mil",
+        "Shop Name": "Modas Kenia 2018",
+        "Commission Rate": 0.07,
+        "Commission": 5.7,
+        "Product Link": "https://shopee.com.br/product/1027460742/19898956424",
+        "Offer Link": "https://s.shopee.com.br/3AvZZaKIqO",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98q-llnsf6x6mfojda.webp",
         "Categoria": "Moda e Acessórios"
     },
     {
@@ -14718,7 +15069,7 @@
     {
         "Item Id": 22996204989,
         "Item Name": "OLEVS 6010 Relogio Masculino Luxo Prova Da água Original Dourado Esportivo De Aço Cronógrafo Quartzo",
-        "Price": 66.0,
+        "Price": 66,
         "Sales": "2,7mil",
         "Shop Name": "Olevs Official Shop",
         "Commission Rate": 0.03,
@@ -15030,7 +15381,7 @@
     {
         "Item Id": 22261431573,
         "Item Name": "Sandálias Exterior Vestir Chinelos De Casal De Praia Interior E",
-        "Price": 50.0,
+        "Price": 50,
         "Sales": 13,
         "Shop Name": "quicksliver.br",
         "Commission Rate": 0.07,
@@ -15147,7 +15498,7 @@
     {
         "Item Id": 20999310387,
         "Item Name": "Short Feminino Alfaiataria com Cinto Social cintura alta",
-        "Price": 37.0,
+        "Price": 37,
         "Sales": "24,9mil",
         "Shop Name": "ELSHADDAI.SHOP",
         "Commission Rate": 0.16,
@@ -15615,7 +15966,7 @@
     {
         "Item Id": 23091362010,
         "Item Name": "Kit 2 Saia Anágua Roupa Feminina Segunda Pele Evangélico Moda Íntima Adulto com alça regulável",
-        "Price": 42.0,
+        "Price": 42,
         "Sales": 84,
         "Shop Name": "Seja Linda Bella Confecções",
         "Commission Rate": 0.13,
@@ -15966,7 +16317,7 @@
     {
         "Item Id": 23596146811,
         "Item Name": "Saia Jeans Midi sem Lycra, Cintura Alta, Com Barra Diferenciada Moda Evangélica. Revesst jeans",
-        "Price": 81.0,
+        "Price": 81,
         "Sales": 65,
         "Shop Name": "Revesst Jeans",
         "Commission Rate": 0.13,
@@ -16005,7 +16356,7 @@
     {
         "Item Id": 22498428503,
         "Item Name": "Saia Lapis Social Feminina Saias Midi Secretaria Moda Evangelica",
-        "Price": 24.0,
+        "Price": 24,
         "Sales": 3,
         "Shop Name": "Moda Express",
         "Commission Rate": 0.23,
@@ -16044,7 +16395,7 @@
     {
         "Item Id": 22197618999,
         "Item Name": "Saia Longa Feminina Alfaiataria Listrada Risca de Giz Cintura Alta Moda Evangelica Elegante C033",
-        "Price": 70.0,
+        "Price": 70,
         "Sales": 160,
         "Shop Name": "Studio Z_",
         "Commission Rate": 0.13,
@@ -16083,7 +16434,7 @@
     {
         "Item Id": 20599676343,
         "Item Name": "Saia Midi  Social Secretaria Feminina Moda Evangelica",
-        "Price": 25.0,
+        "Price": 25,
         "Sales": 0,
         "Shop Name": "Moda Express",
         "Commission Rate": 0.23,
@@ -16304,7 +16655,7 @@
     {
         "Item Id": 18197750414,
         "Item Name": "Saia Social Midi Alfaiataria Luis Twill Cintura Alta Plus Size Moda Evangelica Trabalho Casual C031",
-        "Price": 70.0,
+        "Price": 70,
         "Sales": 266,
         "Shop Name": "Studio Z_",
         "Commission Rate": 0.16,
@@ -16382,7 +16733,7 @@
     {
         "Item Id": 21198102234,
         "Item Name": "Bobie guds Livro de colorir bobie guds Encadernado 50 e 100 folhas Capa dura e Capa flexível",
-        "Price": 27.47,
+        "Price": null,
         "Sales": "11,6mil",
         "Shop Name": "M&M PAPELARIA BIRIGUI",
         "Commission Rate": 0.17,
@@ -16603,7 +16954,7 @@
     {
         "Item Id": 24675862317,
         "Item Name": "Brinquedo de Alimentação com Vazamento Lenta para Cães Pequenos, Médios e Grandes, Melhoram o Qi",
-        "Price": 37.24,
+        "Price": null,
         "Sales": "4,6mil",
         "Shop Name": "Choice Oficial",
         "Commission Rate": 0.13,
@@ -16642,7 +16993,7 @@
     {
         "Item Id": 22491255581,
         "Item Name": "Cama Caminha Pet Cachorro Gato tamanho p,m,g confortável com zíper lavável + almofadinha",
-        "Price": 55.0,
+        "Price": 55,
         "Sales": "13,3mil",
         "Shop Name": "GALAXIA PET BRASIL",
         "Commission Rate": 0.15,
@@ -16668,7 +17019,7 @@
     {
         "Item Id": 20040721534,
         "Item Name": "Cama De Gato Cachorro Casa De Estimação Interna Com Orelhas Longas Removíveis E Laváveis Ninho Dobrável",
-        "Price": 39.9,
+        "Price": null,
         "Sales": 657,
         "Shop Name": "kikipet.br",
         "Commission Rate": 0.07,
@@ -16705,6 +17056,19 @@
         "Categoria": "Pet"
     },
     {
+        "Item Id": 13435249728,
+        "Item Name": "Caminha Casinha Pet Cama GG Grande Cachorro Grande Cão e Gato",
+        "Price": 65.55,
+        "Sales": "4,2mil",
+        "Shop Name": "Sono Pet",
+        "Commission Rate": 0.07,
+        "Commission": 4.59,
+        "Product Link": "https://shopee.com.br/product/491375846/13435249728",
+        "Offer Link": "https://s.shopee.com.br/6VC1Xi7c4K",
+        "Link Imagem": "https://down-cvs-br.img.susercontent.com/br-11134207-7r98o-m2cunishq0s1dc.webp",
+        "Categoria": "Pet"
+    },
+    {
         "Item Id": 19674433517,
         "Item Name": "Caminha Pet Cama Lavável Premium Com Zíper P M G Cachorro Gato Escolha a Cor",
         "Price": 39.17,
@@ -16720,7 +17084,7 @@
     {
         "Item Id": 20871820377,
         "Item Name": "Caminha Pet Premium Cães e Gatos - Tamanho Pequeno Porte",
-        "Price": 114.9,
+        "Price": null,
         "Sales": "2,2mil",
         "Shop Name": "LuckBaby",
         "Commission Rate": 0.13,
@@ -16837,7 +17201,7 @@
     {
         "Item Id": 23592921540,
         "Item Name": "Coleira Peitoral Cachorro E Gato, Conjunto De Guia + Coleira Tipo Colete Para Pet Pequenos E Médios",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "55,2mil",
         "Shop Name": "GINKGO ECOMMERCE",
         "Commission Rate": 0.09,
@@ -17318,7 +17682,7 @@
     {
         "Item Id": 23136499617,
         "Item Name": "Gummy Original - Suplemento Vitamina Para Cabelo E Unhas Em Goma",
-        "Price": 89.0,
+        "Price": 89,
         "Sales": "5,4mil",
         "Shop Name": "Gummy Original",
         "Commission Rate": 0.12,
@@ -17448,7 +17812,7 @@
     {
         "Item Id": 22293496260,
         "Item Name": "Monitor De Frequência Cardíaca Fetal Doppler JSL-T501",
-        "Price": 48.0,
+        "Price": 48,
         "Sales": "2,5mil",
         "Shop Name": "Helala Bolsas",
         "Commission Rate": 0.08,
@@ -17500,7 +17864,7 @@
     {
         "Item Id": 22215355044,
         "Item Name": "Par De Meias Corretor Joanete Palmilha Ortopédico Joanetes Alívio de Dor de Dedo",
-        "Price": 19.0,
+        "Price": 19,
         "Sales": "7,7mil",
         "Shop Name": "Aconchego Importados",
         "Commission Rate": 0.03,
@@ -17513,7 +17877,7 @@
     {
         "Item Id": 19672777612,
         "Item Name": "Tampões Auriculares De Silicone Isolamento Acústico Redução De Ruído Com Esponja Macia Protetor Auricular",
-        "Price": 21.0,
+        "Price": 21,
         "Sales": "7,8mil",
         "Shop Name": "tokerb.br",
         "Commission Rate": 0.07,
@@ -17539,7 +17903,7 @@
     {
         "Item Id": 20097654666,
         "Item Name": "testo GH Pré Hormonal Feminino 60 cápsulas + Glúteos + Pernas + Curvas",
-        "Price": 37.0,
+        "Price": 37,
         "Sales": "2mil",
         "Shop Name": "terravidanatural",
         "Commission Rate": 0.13,
